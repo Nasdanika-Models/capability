@@ -14,6 +14,8 @@ Capability requirements may be binary as P2 or of other types, e.g. numeric. Ess
 Low-level capability requirements (dollars, skills, ...) can be computed from higher level requirements by building a graph of capability providers and passing capability requests.
 Capability providers may be composed similarly to how a computer is assembled from CPU, RAM, Motherboard and hard drive. 
 Translation functions may include probability distributions. They may be computed or retrieved from a lookup table/matrix. 
+Provisioning plan may include dimensional aspects - "when" and "where" in addition to "who".
+Capabilities may include other capabilities (composition) and extend (inheritance).
 
 Capability models may be loaded from a multitude of sources. For example:
 
@@ -40,7 +42,9 @@ Operating on a higher level of abstraction may help to see and analyze as a whol
 
 * Build a capability model (which is a graph)
 * Build a computational graph from it - [Nasdanika Core Graph EMF](https://github.com/Nasdanika/core/tree/master/graph/src/main/java/org/nasdanika/graph/emf) can be used to build a graph of processors from a Ecore model.
-* Perform computations. One form of computations might be building a graph or another data structure to use in further analysis, e.g. in Python.
+* Perform computations. 
+    * One form of computations might be building a graph or another data structure to use in further analysis, e.g. in Python.
+    * For flows the computational graph may compute capability/resource requirements. E.g. in a workflow it may compute staffing levels to support, say, a technology upgrade initiative.
 
 ### Decision Analysis
 
@@ -50,12 +54,13 @@ E.g. Provisioning plan and Capability Provider may extend Alternative and Qualit
 
 ### Architecture 
 
-Elaborates on the above. In TOGAF ADM is essentially a method of coming up with, selecting, and then executing a provisioning plan. 
+Elaborates on the above. In TOGAF, ADM is essentially a method of coming up with, selecting, and then executing a provisioning plan. 
 
 Building Blocks and Architectures may extend Capability Providers. 
 Drivers and principles may extend or inter-relate with Quality Attributes.  
 Architecture Repository may contain a registry of building blocks with "translation functions", quality attributes/criteria and decision analysis templates. Decision analysis templates may be created during technology evaluations.
 "Translation functions" may be created during technology evaluations for new technlogies and from runtime metrics for deployed building blocks.
+Provisioning plans may be created and then executed as [flows](https://github.com/Nasdanika-Models/flow). 
 
 ## Resources
 
