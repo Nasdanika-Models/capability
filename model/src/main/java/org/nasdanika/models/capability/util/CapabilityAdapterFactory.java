@@ -90,6 +90,10 @@ public class CapabilityAdapterFactory extends AdapterFactoryImpl {
 				return createRequirementAdapter();
 			}
 			@Override
+			public Adapter caseRequirementConsumer(RequirementConsumer object) {
+				return createRequirementConsumerAdapter();
+			}
+			@Override
 			public Adapter caseVersionRange(VersionRange object) {
 				return createVersionRangeAdapter();
 			}
@@ -202,6 +206,20 @@ public class CapabilityAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRequirementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.capability.RequirementConsumer <em>Requirement Consumer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.capability.RequirementConsumer
+	 * @generated
+	 */
+	public Adapter createRequirementConsumerAdapter() {
 		return null;
 	}
 

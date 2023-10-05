@@ -24,6 +24,14 @@
       <details key="documentation" value="Some external constraint, something that is needed."/>
     </eAnnotations>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RequirementConsumer" abstract="true"
+      interface="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Something requiring things to perform its function"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requirements" upperBound="-1"
+        eType="#//Requirement" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VersionRange">
     <eStructuralFeatures xsi:type="ecore:EReference" name="minimum" eType="#//Version"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="maximum" eType="#//Version"/>
@@ -48,10 +56,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="versions" upperBound="-1"
         eType="#//VersionRange" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CapabilityProvider" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//DocumentedNamedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="CapabilityProvider" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//DocumentedNamedElement #//RequirementConsumer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="providedCapabilities" upperBound="-1"
         eType="#//Capability"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="requirements" upperBound="-1"
-        eType="#//Requirement" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

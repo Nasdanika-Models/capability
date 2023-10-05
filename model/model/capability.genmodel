@@ -17,6 +17,9 @@
     <genClasses ecoreClass="capability.ecore#//Version"/>
     <genClasses ecoreClass="capability.ecore#//CapabilityVersion"/>
     <genClasses ecoreClass="capability.ecore#//Requirement"/>
+    <genClasses image="false" ecoreClass="capability.ecore#//RequirementConsumer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference capability.ecore#//RequirementConsumer/requirements"/>
+    </genClasses>
     <genClasses ecoreClass="capability.ecore#//VersionRange">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference capability.ecore#//VersionRange/minimum"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference capability.ecore#//VersionRange/maximum"/>
@@ -31,7 +34,6 @@
     </genClasses>
     <genClasses ecoreClass="capability.ecore#//CapabilityProvider">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference capability.ecore#//CapabilityProvider/providedCapabilities"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference capability.ecore#//CapabilityProvider/requirements"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

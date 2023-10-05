@@ -16,6 +16,7 @@ import org.nasdanika.models.capability.CapabilityProvider;
 import org.nasdanika.models.capability.CapabilityRequirement;
 import org.nasdanika.models.capability.CapabilityVersion;
 import org.nasdanika.models.capability.Requirement;
+import org.nasdanika.models.capability.RequirementConsumer;
 import org.nasdanika.models.capability.Version;
 import org.nasdanika.models.capability.VersionRange;
 import org.nasdanika.ncore.NcorePackage;
@@ -52,6 +53,13 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 	 * @generated
 	 */
 	private EClass requirementEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass requirementConsumerEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -210,6 +218,26 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 	 * @generated
 	 */
 	@Override
+	public EClass getRequirementConsumer() {
+		return requirementConsumerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRequirementConsumer_Requirements() {
+		return (EReference)requirementConsumerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getVersionRange() {
 		return versionRangeEClass;
 	}
@@ -330,16 +358,6 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 	 * @generated
 	 */
 	@Override
-	public EReference getCapabilityProvider_Requirements() {
-		return (EReference)capabilityProviderEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public CapabilityFactory getCapabilityFactory() {
 		return (CapabilityFactory)getEFactoryInstance();
 	}
@@ -374,6 +392,9 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 
 		requirementEClass = createEClass(REQUIREMENT);
 
+		requirementConsumerEClass = createEClass(REQUIREMENT_CONSUMER);
+		createEReference(requirementConsumerEClass, REQUIREMENT_CONSUMER__REQUIREMENTS);
+
 		versionRangeEClass = createEClass(VERSION_RANGE);
 		createEReference(versionRangeEClass, VERSION_RANGE__MINIMUM);
 		createEReference(versionRangeEClass, VERSION_RANGE__MAXIMUM);
@@ -388,7 +409,6 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 
 		capabilityProviderEClass = createEClass(CAPABILITY_PROVIDER);
 		createEReference(capabilityProviderEClass, CAPABILITY_PROVIDER__PROVIDED_CAPABILITIES);
-		createEReference(capabilityProviderEClass, CAPABILITY_PROVIDER__REQUIREMENTS);
 	}
 
 	/**
@@ -429,6 +449,7 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 		requirementEClass.getESuperTypes().add(theNcorePackage.getDocumentedNamedElement());
 		capabilityRequirementEClass.getESuperTypes().add(this.getRequirement());
 		capabilityProviderEClass.getESuperTypes().add(theNcorePackage.getDocumentedNamedElement());
+		capabilityProviderEClass.getESuperTypes().add(this.getRequirementConsumer());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(capabilityEClass, Capability.class, "Capability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -441,6 +462,9 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 		initEClass(capabilityVersionEClass, CapabilityVersion.class, "CapabilityVersion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(requirementEClass, Requirement.class, "Requirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(requirementConsumerEClass, RequirementConsumer.class, "RequirementConsumer", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRequirementConsumer_Requirements(), this.getRequirement(), null, "requirements", null, 0, -1, RequirementConsumer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(versionRangeEClass, VersionRange.class, "VersionRange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVersionRange_Minimum(), this.getVersion(), null, "minimum", null, 0, 1, VersionRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -456,7 +480,6 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 
 		initEClass(capabilityProviderEClass, CapabilityProvider.class, "CapabilityProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCapabilityProvider_ProvidedCapabilities(), this.getCapability(), null, "providedCapabilities", null, 0, -1, CapabilityProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCapabilityProvider_Requirements(), this.getRequirement(), null, "requirements", null, 0, -1, CapabilityProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -491,6 +514,12 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 		   source,
 		   new String[] {
 			   "documentation", "Some external constraint, something that is needed."
+		   });
+		addAnnotation
+		  (requirementConsumerEClass,
+		   source,
+		   new String[] {
+			   "documentation", "Something requiring things to perform its function"
 		   });
 		addAnnotation
 		  (getCapabilityRequirement_Min(),

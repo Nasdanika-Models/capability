@@ -585,6 +585,43 @@ public interface CapabilityPackage extends EPackage {
 	int REQUIREMENT_OPERATION_COUNT = NcorePackage.DOCUMENTED_NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.nasdanika.models.capability.RequirementConsumer <em>Requirement Consumer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.capability.RequirementConsumer
+	 * @see org.nasdanika.models.capability.impl.CapabilityPackageImpl#getRequirementConsumer()
+	 * @generated
+	 */
+	int REQUIREMENT_CONSUMER = 4;
+
+	/**
+	 * The feature id for the '<em><b>Requirements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT_CONSUMER__REQUIREMENTS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Requirement Consumer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT_CONSUMER_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Requirement Consumer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT_CONSUMER_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.nasdanika.models.capability.impl.VersionRangeImpl <em>Version Range</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -592,7 +629,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @see org.nasdanika.models.capability.impl.CapabilityPackageImpl#getVersionRange()
 	 * @generated
 	 */
-	int VERSION_RANGE = 4;
+	int VERSION_RANGE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Minimum</b></em>' reference.
@@ -656,7 +693,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @see org.nasdanika.models.capability.impl.CapabilityPackageImpl#getCapabilityRequirement()
 	 * @generated
 	 */
-	int CAPABILITY_REQUIREMENT = 5;
+	int CAPABILITY_REQUIREMENT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -810,7 +847,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @see org.nasdanika.models.capability.impl.CapabilityPackageImpl#getCapabilityProvider()
 	 * @generated
 	 */
-	int CAPABILITY_PROVIDER = 6;
+	int CAPABILITY_PROVIDER = 7;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -903,22 +940,22 @@ public interface CapabilityPackage extends EPackage {
 	int CAPABILITY_PROVIDER__CONTEXT_HELP = NcorePackage.DOCUMENTED_NAMED_ELEMENT__CONTEXT_HELP;
 
 	/**
-	 * The feature id for the '<em><b>Provided Capabilities</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER__PROVIDED_CAPABILITIES = NcorePackage.DOCUMENTED_NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Requirements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_PROVIDER__REQUIREMENTS = NcorePackage.DOCUMENTED_NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int CAPABILITY_PROVIDER__REQUIREMENTS = NcorePackage.DOCUMENTED_NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Provided Capabilities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_PROVIDER__PROVIDED_CAPABILITIES = NcorePackage.DOCUMENTED_NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Provider</em>' class.
@@ -1011,6 +1048,27 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getRequirement();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.capability.RequirementConsumer <em>Requirement Consumer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Requirement Consumer</em>'.
+	 * @see org.nasdanika.models.capability.RequirementConsumer
+	 * @generated
+	 */
+	EClass getRequirementConsumer();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.capability.RequirementConsumer#getRequirements <em>Requirements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Requirements</em>'.
+	 * @see org.nasdanika.models.capability.RequirementConsumer#getRequirements()
+	 * @see #getRequirementConsumer()
+	 * @generated
+	 */
+	EReference getRequirementConsumer_Requirements();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.capability.VersionRange <em>Version Range</em>}'.
@@ -1142,17 +1200,6 @@ public interface CapabilityPackage extends EPackage {
 	EReference getCapabilityProvider_ProvidedCapabilities();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.capability.CapabilityProvider#getRequirements <em>Requirements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Requirements</em>'.
-	 * @see org.nasdanika.models.capability.CapabilityProvider#getRequirements()
-	 * @see #getCapabilityProvider()
-	 * @generated
-	 */
-	EReference getCapabilityProvider_Requirements();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1232,6 +1279,22 @@ public interface CapabilityPackage extends EPackage {
 		 * @generated
 		 */
 		EClass REQUIREMENT = eINSTANCE.getRequirement();
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.capability.RequirementConsumer <em>Requirement Consumer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.capability.RequirementConsumer
+		 * @see org.nasdanika.models.capability.impl.CapabilityPackageImpl#getRequirementConsumer()
+		 * @generated
+		 */
+		EClass REQUIREMENT_CONSUMER = eINSTANCE.getRequirementConsumer();
+		/**
+		 * The meta object literal for the '<em><b>Requirements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REQUIREMENT_CONSUMER__REQUIREMENTS = eINSTANCE.getRequirementConsumer_Requirements();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.capability.impl.VersionRangeImpl <em>Version Range</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -1322,13 +1385,6 @@ public interface CapabilityPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CAPABILITY_PROVIDER__PROVIDED_CAPABILITIES = eINSTANCE.getCapabilityProvider_ProvidedCapabilities();
-		/**
-		 * The meta object literal for the '<em><b>Requirements</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CAPABILITY_PROVIDER__REQUIREMENTS = eINSTANCE.getCapabilityProvider_Requirements();
 
 	}
 

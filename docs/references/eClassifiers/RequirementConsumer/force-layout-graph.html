@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="EN">
   <head>
-    <title>Classifiers</title>
+    <title>Force Graph</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" id="nsd-bootstrap-theme-stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,7 +35,7 @@
   gtag('config', 'G-9BRJVLK8CC');
 </script>    
 
-<script src="search-documents.js"></script>
+<script src="../../../search-documents.js"></script>
 
 <script src="https://cdn.jsdelivr.net/gh/olivernn/lunr.js@v2.3.9/lunr.js"></script>
 
@@ -72,6 +72,16 @@ window.nsdJsTreeSearchCallback = function(str, node) {
 </script>
 </head>
   <body>
+    <div tabindex="-1" id="nsd_k1" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">Hover mouse over nodes elements to display tooltips.
+Double-click on nodes to navigate go documentation.
+Drag to rearrange, nodes will not stay in place once released.
+</div>
+        </div>
+      </div>
+    </div>
     <div class="container-fluid nsd-app-container">
       <div class="row">
         <div class="col nsd-app-header">
@@ -79,10 +89,10 @@ window.nsdJsTreeSearchCallback = function(str, node) {
             <img src="https://docs.nasdanika.org/images/nasdanika-logo.png" class="nsd-app-label-icon">Nasdanika Models</a>
           <ul class="nav nsd-app-header-navs">
             <li class="nav-item">
-              <a href="search.html" data-nsd-label-uuid="49179be4-d314-4330-8fc8-2e83e84ea83e" class="nav-link"><span class="fas fa-search nsd-app-label-icon"></span>Search</a>
+              <a href="../../../search.html" data-nsd-label-uuid="49179be4-d314-4330-8fc8-2e83e84ea83e" class="nav-link"><span class="fas fa-search nsd-app-label-icon"></span>Search</a>
             </li>
             <li class="nav-item">
-              <a href="glossary.html" data-nsd-label-uuid="ced98ce9-1e79-4a38-af63-0656f88addc5" class="nav-link"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</a>
+              <a href="../../../glossary.html" data-nsd-label-uuid="ced98ce9-1e79-4a38-af63-0656f88addc5" class="nav-link"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</a>
             </li>
           </ul>
         </div>
@@ -90,29 +100,30 @@ window.nsdJsTreeSearchCallback = function(str, node) {
       <div class="row">
         <div class="col nsd-app-navbar">
           <ul class="navbar navbar-light navbar-expand-lg">
-            <a href="index.html" data-nsd-label-uuid="c9f06399-8857-4ae4-a883-c12d1e726da2" class="navbar-brand">
+            <a href="../../../index.html" data-nsd-label-uuid="c9f06399-8857-4ae4-a883-c12d1e726da2" class="navbar-brand">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EPackage.gif" class="nsd-app-label-icon">capability</a>
-            <button type="button" data-toggle="collapse" data-target="#nsd_oh" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+            <button type="button" data-toggle="collapse" data-target="#nsd_js" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
             </button>
-            <div id="nsd_oh" class="collapse navbar-collapse">
+            <div id="nsd_js" class="collapse navbar-collapse">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><span data-nsd-label-uuid="84718455-2f60-40a3-959e-c899d5bde39f" class="navbar-text">Classifiers</span>
+                <li class="nav-item">
+                  <a href="../../../classifiers.html" data-nsd-label-uuid="84718455-2f60-40a3-959e-c899d5bde39f" class="nav-link">Classifiers</a>
                 </li>
                 <li class="nav-item">
-                  <a href="diagram.html" data-nsd-label-uuid="b845b2a8-9f97-40ec-9a44-f0aafe7bca2c" class="nav-link"><span class="fas fa-project-diagram nsd-app-label-icon"></span>Diagram</a>
+                  <a href="../../../diagram.html" data-nsd-label-uuid="b845b2a8-9f97-40ec-9a44-f0aafe7bca2c" class="nav-link"><span class="fas fa-project-diagram nsd-app-label-icon"></span>Diagram</a>
                 </li>
                 <li class="nav-item">
                   </li><li data-nsd-label-uuid="e4efe760-a96c-4041-a748-f283811ac661" class="dropdown">
                     <a role="button" data-toggle="dropdown" class="nav-link dropdown-toggle">
                       <img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/16/external-diagram-seo-media-dreamstale-lineal-dreamstale.png" class="nsd-app-label-icon">Graphs</a>
                     <div class="dropdown-menu">
-                      <a href="default-graph.html" data-nsd-label-uuid="ff96fd08-74a5-4a9b-acb1-f81eede91734" class="dropdown-item">Default Graph</a>
-                      <a href="circular-layout-graph.html" data-nsd-label-uuid="13a1e6e9-cfb1-48f3-be43-1881a5699a6f" class="dropdown-item">Circular Graph</a>
-                      <a href="force-layout-graph.html" data-nsd-label-uuid="19673e7b-54c0-4e6a-b7d0-dba69ceb247e" class="dropdown-item">Force Graph</a>
+                      <a href="../../../default-graph.html" data-nsd-label-uuid="ff96fd08-74a5-4a9b-acb1-f81eede91734" class="dropdown-item">Default Graph</a>
+                      <a href="../../../circular-layout-graph.html" data-nsd-label-uuid="13a1e6e9-cfb1-48f3-be43-1881a5699a6f" class="dropdown-item">Circular Graph</a>
+                      <a href="../../../force-layout-graph.html" data-nsd-label-uuid="19673e7b-54c0-4e6a-b7d0-dba69ceb247e" class="dropdown-item">Force Graph</a>
                       <div title="With dependencies and sub-packages" class="dropdown-divider"></div>
-                      <a href="default-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="c4e7741a-43b8-462a-934a-f08fdc55dc08" class="dropdown-item">Default Graph</a>
-                      <a href="circular-layout-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="0e0e43c8-a524-47c9-aa6e-a4e83fedc157" class="dropdown-item">Circular Graph</a>
-                      <a href="force-layout-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="285eb4f2-394a-4fe5-a5bc-0d5c0b785606" class="dropdown-item">Force Graph</a>
+                      <a href="../../../default-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="c4e7741a-43b8-462a-934a-f08fdc55dc08" class="dropdown-item">Default Graph</a>
+                      <a href="../../../circular-layout-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="0e0e43c8-a524-47c9-aa6e-a4e83fedc157" class="dropdown-item">Circular Graph</a>
+                      <a href="../../../force-layout-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="285eb4f2-394a-4fe5-a5bc-0d5c0b785606" class="dropdown-item">Force Graph</a>
                     </div>
                   </li>
                 
@@ -124,29 +135,45 @@ window.nsdJsTreeSearchCallback = function(str, node) {
       <div class="row nsd-app-content-row">
         <div class="col nsd-app-navigation-panel">
           <div class="list-group list-group-flush">
-            <a href="references/eClassifiers/Capability/index.html" title="Ability to do something. Skill, authorization, software component." data-nsd-label-uuid="c72b08bf-481b-41e6-9f5c-e833232186e5" class="list-group-item list-group-action">
+            <a href="../Capability/index.html" title="Ability to do something. Skill, authorization, software component." data-nsd-label-uuid="c72b08bf-481b-41e6-9f5c-e833232186e5" class="list-group-item list-group-action">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Capability</a>
-            <a href="references/eClassifiers/CapabilityProvider/index.html" data-nsd-label-uuid="fa18c89e-a6b4-4965-ae39-30da94a680bf" class="list-group-item list-group-action">
+            <a href="../CapabilityProvider/index.html" data-nsd-label-uuid="fa18c89e-a6b4-4965-ae39-30da94a680bf" class="list-group-item list-group-action">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">CapabilityProvider</a>
-            <a href="references/eClassifiers/CapabilityRequirement/index.html" data-nsd-label-uuid="e0726539-ce6b-44b0-9c84-c6fd9771cbd3" class="list-group-item list-group-action">
+            <a href="../CapabilityRequirement/index.html" data-nsd-label-uuid="e0726539-ce6b-44b0-9c84-c6fd9771cbd3" class="list-group-item list-group-action">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">CapabilityRequirement</a>
-            <a href="references/eClassifiers/CapabilityVersion/index.html" data-nsd-label-uuid="d4ea5ad7-818c-444a-8991-de14ccc88681" class="list-group-item list-group-action">
+            <a href="../CapabilityVersion/index.html" data-nsd-label-uuid="d4ea5ad7-818c-444a-8991-de14ccc88681" class="list-group-item list-group-action">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">CapabilityVersion</a>
-            <a href="references/eClassifiers/Requirement/index.html" title="Some external constraint, something that is needed." data-nsd-label-uuid="f48c691d-086c-4799-af7d-7ffe9d086eb5" class="list-group-item list-group-action">
+            <a href="../Requirement/index.html" title="Some external constraint, something that is needed." data-nsd-label-uuid="f48c691d-086c-4799-af7d-7ffe9d086eb5" class="list-group-item list-group-action">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Requirement</a>
-            <a href="references/eClassifiers/RequirementConsumer/index.html" title="Something requiring things to perform its function" data-nsd-label-uuid="254de3a5-8c0b-4610-9d28-93253c6bd232" class="list-group-item list-group-action">
+            <a href="index.html" title="Something requiring things to perform its function" data-nsd-label-uuid="254de3a5-8c0b-4610-9d28-93253c6bd232" class="list-group-item list-group-action active">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EInterface.gif" class="nsd-app-label-icon"><i>RequirementConsumer</i></a>
-            <a href="references/eClassifiers/Version/index.html" data-nsd-label-uuid="60c34fde-c307-447e-818b-5728df2ff02f" class="list-group-item list-group-action">
+            <a href="../Version/index.html" data-nsd-label-uuid="60c34fde-c307-447e-818b-5728df2ff02f" class="list-group-item list-group-action">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Version</a>
-            <a href="references/eClassifiers/VersionRange/index.html" data-nsd-label-uuid="96c66423-1d2b-4fed-ac9c-def256603b41" class="list-group-item list-group-action">
+            <a href="../VersionRange/index.html" data-nsd-label-uuid="96c66423-1d2b-4fed-ac9c-def256603b41" class="list-group-item list-group-action">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">VersionRange</a>
           </div>
         </div>
-        <div data-nsd-label-uuid="84718455-2f60-40a3-959e-c899d5bde39f" data-nsd-action-uris="uuid:84718455-2f60-40a3-959e-c899d5bde39f" class="col nsd-app-content-panel">
+        <div data-nsd-label-uuid="0539ed70-b5e4-4a7e-b54e-e4dda2d59bb7" data-nsd-action-uris="uuid:0539ed70-b5e4-4a7e-b54e-e4dda2d59bb7" class="col nsd-app-content-panel">
           <div class="container-fluid">
+            <div class="row nsd-app-content-panel-breadcrumb-row">
+              <div class="col">
+                <nav aria-label="breadcrumb" class="nsd-app-content-panel-breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="index.html" title="Something requiring things to perform its function" data-nsd-label-uuid="254de3a5-8c0b-4610-9d28-93253c6bd232">
+                        <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EInterface.gif" class="nsd-app-label-icon"><i>RequirementConsumer</i></a>
+                    </li>
+                    <li class="breadcrumb-item"><span data-nsd-label-uuid="442549a7-76ab-44e3-bcbc-82744d528fcf"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/16/external-diagram-seo-media-dreamstale-lineal-dreamstale.png" class="nsd-app-label-icon">Graphs</span>
+                    </li>
+                    <li class="breadcrumb-item active"><span data-nsd-label-uuid="0539ed70-b5e4-4a7e-b54e-e4dda2d59bb7">Force Graph</span>
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
             <div class="row nsd-app-content-panel-title-and-items-row">
               <div class="col-auto">
-                <h1><span data-nsd-label-uuid="84718455-2f60-40a3-959e-c899d5bde39f" class="nsd-app-content-panel-title">Classifiers</span>
+                <h1><span data-nsd-label-uuid="0539ed70-b5e4-4a7e-b54e-e4dda2d59bb7" class="nsd-app-content-panel-title">Force Graph<a data-toggle="modal" data-target="#nsd_k1" href="#" title="A live force-layout graph of this classifier and related classifiers showing relationships between them" style="vertical-align:super;font-size:x-small;margin-left:0.2em"><span class="far fa-question-circle nsd-app-label-icon"></span></a></span>
                 </h1>
               </div>
             </div>
@@ -154,13 +181,36 @@ window.nsdJsTreeSearchCallback = function(str, node) {
               <div class="col">
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col">
-<div>
-  <div id="classifiers-table">
-    <nsd-ecore-doc-table :columns="[{&quot;key&quot;:&quot;name&quot;,&quot;visible&quot;:true,&quot;label&quot;:&quot;Name&quot;},{&quot;key&quot;:&quot;description&quot;,&quot;visible&quot;:true,&quot;label&quot;:&quot;Description&quot;}]" :items="[{&quot;name&quot;:&quot;\r\n<a href=\&quot;references/eClassifiers/Capability/index.html\&quot; title=\&quot;Ability to do something. Skill, authorization, software component.\&quot;>\r\n  <img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/>Capability<\/a>&quot;,&quot;description&quot;:&quot;Ability to do something. Skill, authorization, software component.&quot;},{&quot;name&quot;:&quot;\r\n<a href=\&quot;references/eClassifiers/CapabilityProvider/index.html\&quot;>\r\n  <img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/>CapabilityProvider<\/a>&quot;},{&quot;name&quot;:&quot;\r\n<a href=\&quot;references/eClassifiers/CapabilityRequirement/index.html\&quot;>\r\n  <img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/>CapabilityRequirement<\/a>&quot;},{&quot;name&quot;:&quot;\r\n<a href=\&quot;references/eClassifiers/CapabilityVersion/index.html\&quot;>\r\n  <img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/>CapabilityVersion<\/a>&quot;},{&quot;name&quot;:&quot;\r\n<a href=\&quot;references/eClassifiers/Requirement/index.html\&quot; title=\&quot;Some external constraint, something that is needed.\&quot;>\r\n  <img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/>Requirement<\/a>&quot;,&quot;description&quot;:&quot;Some external constraint, something that is needed.&quot;},{&quot;name&quot;:&quot;\r\n<a href=\&quot;references/eClassifiers/RequirementConsumer/index.html\&quot; title=\&quot;Something requiring things to perform its function\&quot;>\r\n  <img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EInterface.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/><i>RequirementConsumer<\/i><\/a>&quot;,&quot;description&quot;:&quot;Something requiring things to perform its function&quot;},{&quot;name&quot;:&quot;\r\n<a href=\&quot;references/eClassifiers/Version/index.html\&quot;>\r\n  <img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/>Version<\/a>&quot;},{&quot;name&quot;:&quot;\r\n<a href=\&quot;references/eClassifiers/VersionRange/index.html\&quot;>\r\n  <img src=\&quot;https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif\&quot; class=\&quot;nsd-app-label-icon\&quot;/>VersionRange<\/a>&quot;}]" config-key="epackage-classifiers" />
-  </div>
-  <script>new Vue({ el: '#classifiers-table' });</script>
-</div></div>
+                    <div class="col"><div id="graph-container-24" class="row" style="height:80vh;width:100%">
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var dom = document.getElementById("graph-container-24");
+		var myChart = echarts.init(dom, null, {
+			render: "canvas",
+			useDirtyRect: false
+		});
+		var option = {"legend":{},"series":[{"type":"graph","emphasis":{"focus":"adjacency"},"data":[{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"Requirement@ecore://nasdanika.org/models/capability","name":"Requirement","value":{"description":"Some external constraint, something that is needed.","externalLink":"../Requirement/index.html"},"x":916.2957758123267,"y":426.6417426790413,"category":0},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EInterface.gif","id":"RequirementConsumer@ecore://nasdanika.org/models/capability","name":"RequirementConsumer","value":{"description":"Something requiring things to perform its function","externalLink":""},"x":791.5264085435364,"y":135.78969048157742,"category":0}],"symbolSize":16,"roam":true,"layout":"force","links":[{"source":1,"target":0}],"categories":[{"name":"capability"}],"draggable":true,"label":{"show":true,"position":"right"},"lineStyle":{"color":"source","curveness":0},"force":{"repulsion":200,"gravity":0.1,"edgeLength":200}}]};
+		option.tooltip = {};
+		option.series[0].tooltip = {
+			formatter: function(arg) {
+				return arg.value ? arg.value.description : null;
+			}
+		};
+		myChart.setOption(option);
+		myChart.on("dblclick", function(params) {
+			if (params.value) {
+				if (params.value.link) {
+					window.open(params.value.link, "_self");
+				} else if (params.value.externalLink) {
+					window.open(params.value.externalLink);
+				}
+			}
+		});
+		window.addEventListener("resize", myChart.resize);
+	});
+</script>
+</div>
                   </div>
                 </div>
               </div>

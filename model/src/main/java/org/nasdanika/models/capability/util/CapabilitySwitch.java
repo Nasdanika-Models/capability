@@ -126,6 +126,12 @@ public class CapabilitySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CapabilityPackage.REQUIREMENT_CONSUMER: {
+				RequirementConsumer requirementConsumer = (RequirementConsumer)theEObject;
+				T result = caseRequirementConsumer(requirementConsumer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case CapabilityPackage.VERSION_RANGE: {
 				VersionRange versionRange = (VersionRange)theEObject;
 				T result = caseVersionRange(versionRange);
@@ -150,6 +156,7 @@ public class CapabilitySwitch<T> extends Switch<T> {
 				CapabilityProvider capabilityProvider = (CapabilityProvider)theEObject;
 				T result = caseCapabilityProvider(capabilityProvider);
 				if (result == null) result = caseDocumentedNamedElement(capabilityProvider);
+				if (result == null) result = caseRequirementConsumer(capabilityProvider);
 				if (result == null) result = caseNamedElement(capabilityProvider);
 				if (result == null) result = caseDocumented(capabilityProvider);
 				if (result == null) result = caseModelElement(capabilityProvider);
@@ -220,6 +227,21 @@ public class CapabilitySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRequirement(Requirement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Requirement Consumer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Requirement Consumer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRequirementConsumer(RequirementConsumer object) {
 		return null;
 	}
 
