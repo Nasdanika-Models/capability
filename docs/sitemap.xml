@@ -2,82 +2,382 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" >
   <url>
     <loc>https://capability.models.nasdanika.org/circular-layout-graph-with-dependencies-and-subpackages.html</loc>
-    <lastmod>2023-09-22T18:49:46.113-04:00</lastmod>
+    <lastmod>2023-10-05T06:52:56.207-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://capability.models.nasdanika.org/circular-layout-graph.html</loc>
-    <lastmod>2023-09-22T18:49:46.104-04:00</lastmod>
+    <lastmod>2023-10-05T06:52:56.202-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://capability.models.nasdanika.org/classifiers.html</loc>
-    <lastmod>2023-09-22T18:49:46.097-04:00</lastmod>
+    <lastmod>2023-10-05T06:52:56.194-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://capability.models.nasdanika.org/default-graph-with-dependencies-and-subpackages.html</loc>
-    <lastmod>2023-09-22T18:49:46.111-04:00</lastmod>
+    <lastmod>2023-10-05T06:52:56.205-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://capability.models.nasdanika.org/default-graph.html</loc>
-    <lastmod>2023-09-22T18:49:46.102-04:00</lastmod>
+    <lastmod>2023-10-05T06:52:56.199-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://capability.models.nasdanika.org/diagram.html</loc>
-    <lastmod>2023-09-22T18:49:46.100-04:00</lastmod>
+    <lastmod>2023-10-05T06:52:56.198-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://capability.models.nasdanika.org/force-layout-graph-with-dependencies-and-subpackages.html</loc>
-    <lastmod>2023-09-22T18:49:46.114-04:00</lastmod>
+    <lastmod>2023-10-05T06:52:56.209-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://capability.models.nasdanika.org/force-layout-graph.html</loc>
-    <lastmod>2023-09-22T18:49:46.108-04:00</lastmod>
+    <lastmod>2023-10-05T06:52:56.203-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://capability.models.nasdanika.org/glossary.html</loc>
-    <lastmod>2023-09-22T18:49:46.120-04:00</lastmod>
+    <lastmod>2023-10-05T06:52:56.216-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://capability.models.nasdanika.org/index.html</loc>
-    <lastmod>2023-09-22T18:49:46.075-04:00</lastmod>
+    <lastmod>2023-10-05T06:52:56.043-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Capability/attributes.html</loc>
+    <lastmod>2023-10-05T06:52:56.048-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://capability.models.nasdanika.org/references/eClassifiers/Capability/circular-layout-graph.html</loc>
-    <lastmod>2023-09-22T18:49:46.092-04:00</lastmod>
+    <lastmod>2023-10-05T06:52:56.076-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://capability.models.nasdanika.org/references/eClassifiers/Capability/default-graph.html</loc>
-    <lastmod>2023-09-22T18:49:46.086-04:00</lastmod>
+    <lastmod>2023-10-05T06:52:56.074-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://capability.models.nasdanika.org/references/eClassifiers/Capability/diagram.html</loc>
-    <lastmod>2023-09-22T18:49:46.082-04:00</lastmod>
+    <lastmod>2023-10-05T06:52:56.071-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://capability.models.nasdanika.org/references/eClassifiers/Capability/force-layout-graph.html</loc>
-    <lastmod>2023-09-22T18:49:46.094-04:00</lastmod>
+    <lastmod>2023-10-05T06:52:56.079-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://capability.models.nasdanika.org/references/eClassifiers/Capability/index.html</loc>
-    <lastmod>2023-09-22T18:49:46.080-04:00</lastmod>
+    <lastmod>2023-10-05T06:52:56.046-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Capability/inheritance.html</loc>
+    <lastmod>2023-10-05T06:52:56.056-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Capability/load-specification.html</loc>
+    <lastmod>2023-10-05T06:52:56.081-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Capability/references/eStructuralFeatures/includes/index.html</loc>
+    <lastmod>2023-10-05T06:52:56.067-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Capability/references.html</loc>
+    <lastmod>2023-10-05T06:52:56.059-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityProvider/attributes.html</loc>
+    <lastmod>2023-10-05T06:52:56.085-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityProvider/circular-layout-graph.html</loc>
+    <lastmod>2023-10-05T06:52:56.098-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityProvider/default-graph.html</loc>
+    <lastmod>2023-10-05T06:52:56.095-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityProvider/diagram.html</loc>
+    <lastmod>2023-10-05T06:52:56.092-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityProvider/force-layout-graph.html</loc>
+    <lastmod>2023-10-05T06:52:56.102-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityProvider/index.html</loc>
+    <lastmod>2023-10-05T06:52:56.083-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityProvider/inheritance.html</loc>
+    <lastmod>2023-10-05T06:52:56.087-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityProvider/load-specification.html</loc>
+    <lastmod>2023-10-05T06:52:56.104-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityProvider/references.html</loc>
+    <lastmod>2023-10-05T06:52:56.089-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityRequirement/attributes.html</loc>
+    <lastmod>2023-10-05T06:52:56.108-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityRequirement/circular-layout-graph.html</loc>
+    <lastmod>2023-10-05T06:52:56.124-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityRequirement/default-graph.html</loc>
+    <lastmod>2023-10-05T06:52:56.122-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityRequirement/diagram.html</loc>
+    <lastmod>2023-10-05T06:52:56.120-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityRequirement/force-layout-graph.html</loc>
+    <lastmod>2023-10-05T06:52:56.125-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityRequirement/index.html</loc>
+    <lastmod>2023-10-05T06:52:56.106-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityRequirement/inheritance.html</loc>
+    <lastmod>2023-10-05T06:52:56.115-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityRequirement/load-specification.html</loc>
+    <lastmod>2023-10-05T06:52:56.127-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityRequirement/references/eStructuralFeatures/max/index.html</loc>
+    <lastmod>2023-10-05T06:52:56.113-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityRequirement/references/eStructuralFeatures/min/index.html</loc>
+    <lastmod>2023-10-05T06:52:56.112-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityRequirement/references.html</loc>
+    <lastmod>2023-10-05T06:52:56.117-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityVersion/attributes.html</loc>
+    <lastmod>2023-10-05T06:52:56.131-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityVersion/circular-layout-graph.html</loc>
+    <lastmod>2023-10-05T06:52:56.140-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityVersion/default-graph.html</loc>
+    <lastmod>2023-10-05T06:52:56.138-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityVersion/diagram.html</loc>
+    <lastmod>2023-10-05T06:52:56.137-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityVersion/force-layout-graph.html</loc>
+    <lastmod>2023-10-05T06:52:56.141-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityVersion/index.html</loc>
+    <lastmod>2023-10-05T06:52:56.129-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityVersion/inheritance.html</loc>
+    <lastmod>2023-10-05T06:52:56.132-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityVersion/load-specification.html</loc>
+    <lastmod>2023-10-05T06:52:56.143-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/CapabilityVersion/references.html</loc>
+    <lastmod>2023-10-05T06:52:56.135-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Requirement/attributes.html</loc>
+    <lastmod>2023-10-05T06:52:56.147-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Requirement/circular-layout-graph.html</loc>
+    <lastmod>2023-10-05T06:52:56.156-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Requirement/default-graph.html</loc>
+    <lastmod>2023-10-05T06:52:56.154-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Requirement/diagram.html</loc>
+    <lastmod>2023-10-05T06:52:56.152-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Requirement/force-layout-graph.html</loc>
+    <lastmod>2023-10-05T06:52:56.158-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Requirement/index.html</loc>
+    <lastmod>2023-10-05T06:52:56.145-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Requirement/inheritance.html</loc>
+    <lastmod>2023-10-05T06:52:56.149-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Requirement/load-specification.html</loc>
+    <lastmod>2023-10-05T06:52:56.160-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Requirement/references.html</loc>
+    <lastmod>2023-10-05T06:52:56.151-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Version/attributes.html</loc>
+    <lastmod>2023-10-05T06:52:56.165-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Version/circular-layout-graph.html</loc>
+    <lastmod>2023-10-05T06:52:56.175-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Version/default-graph.html</loc>
+    <lastmod>2023-10-05T06:52:56.173-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Version/diagram.html</loc>
+    <lastmod>2023-10-05T06:52:56.172-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Version/force-layout-graph.html</loc>
+    <lastmod>2023-10-05T06:52:56.176-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Version/index.html</loc>
+    <lastmod>2023-10-05T06:52:56.163-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Version/inheritance.html</loc>
+    <lastmod>2023-10-05T06:52:56.168-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Version/load-specification.html</loc>
+    <lastmod>2023-10-05T06:52:56.178-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/Version/references.html</loc>
+    <lastmod>2023-10-05T06:52:56.170-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/VersionRange/attributes.html</loc>
+    <lastmod>2023-10-05T06:52:56.182-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/VersionRange/circular-layout-graph.html</loc>
+    <lastmod>2023-10-05T06:52:56.189-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/VersionRange/default-graph.html</loc>
+    <lastmod>2023-10-05T06:52:56.188-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/VersionRange/diagram.html</loc>
+    <lastmod>2023-10-05T06:52:56.186-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/VersionRange/force-layout-graph.html</loc>
+    <lastmod>2023-10-05T06:52:56.191-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/VersionRange/index.html</loc>
+    <lastmod>2023-10-05T06:52:56.180-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/VersionRange/load-specification.html</loc>
+    <lastmod>2023-10-05T06:52:56.193-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://capability.models.nasdanika.org/references/eClassifiers/VersionRange/references.html</loc>
+    <lastmod>2023-10-05T06:52:56.184-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://capability.models.nasdanika.org/search.html</loc>
-    <lastmod>2023-09-22T18:49:46.117-04:00</lastmod>
+    <lastmod>2023-10-05T06:52:56.212-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>

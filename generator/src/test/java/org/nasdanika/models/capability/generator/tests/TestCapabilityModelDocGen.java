@@ -48,6 +48,7 @@ import org.nasdanika.models.capability.CapabilityPackage;
 import org.nasdanika.models.capability.processors.EcoreGenCapabilityProcessorsFactory;
 import org.nasdanika.models.ecore.graph.EcoreGraphFactory;
 import org.nasdanika.models.ecore.graph.processors.EcoreNodeProcessorFactory;
+import org.nasdanika.ncore.NcorePackage;
 
 /**
  * Tests Ecore -> Graph -> Processor -> actions generation
@@ -57,8 +58,8 @@ import org.nasdanika.models.ecore.graph.processors.EcoreNodeProcessorFactory;
 public class TestCapabilityModelDocGen {
 	
 	@Test
-	public void testGenerateExcelModelDoc() throws IOException, DiagnosticException {
-		List<EPackage> ePackages = Arrays.asList(EcorePackage.eINSTANCE, CapabilityPackage.eINSTANCE);
+	public void testGenerateCapabilityModelDoc() throws IOException, DiagnosticException {
+		List<EPackage> ePackages = Arrays.asList(EcorePackage.eINSTANCE, NcorePackage.eINSTANCE, CapabilityPackage.eINSTANCE);
 		ProgressMonitor progressMonitor = new NullProgressMonitor(); // new PrintStreamProgressMonitor();
 		Transformer<EObject,Element> graphFactory = new Transformer<>(new EcoreGraphFactory());
 		Map<EObject, Element> graph = graphFactory.transform(ePackages, false, progressMonitor);
@@ -104,6 +105,7 @@ public class TestCapabilityModelDocGen {
 		
 		Map<EPackage, URI> packageURIMap = Map.ofEntries(
 			Map.entry(EcorePackage.eINSTANCE, URI.createURI("https://ecore.models.nasdanika.org/")),			
+			Map.entry(NcorePackage.eINSTANCE, URI.createURI("https://ncore.models.nasdanika.org/")),			
 			Map.entry(CapabilityPackage.eINSTANCE, baseActionURI)	
 		);
 		

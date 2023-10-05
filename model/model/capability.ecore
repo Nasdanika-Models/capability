@@ -2,5 +2,56 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="capability" nsURI="ecore://nasdanika.org/models/capability"
     nsPrefix="org.nasdanika.models.capability">
-  <eClassifiers xsi:type="ecore:EClass" name="Capability"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Capability" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//DocumentedNamedElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Ability to do something. Skill, authorization, software component."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="versions" upperBound="-1"
+        eType="#//CapabilityVersion" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="includes" upperBound="-1"
+        eType="#//Capability" eOpposite="#//Capability/includedIn">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Capabilities included in this capability"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="includedIn" upperBound="-1"
+        eType="#//Capability" eOpposite="#//Capability/includes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Version" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//DocumentedNamedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CapabilityVersion" eSuperTypes="#//Version #//Capability"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Requirement" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//DocumentedNamedElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Some external constraint, something that is needed."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VersionRange">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="minimum" eType="#//Version"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="maximum" eType="#//Version"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="includeMinimum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="includeMaximum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CapabilityRequirement" eSuperTypes="#//Requirement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="min" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Minimal cardinality. 0 means that the requirement is optional"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="max" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Maximum cardinality. -1 means &quot;all available&quot;"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capability" lowerBound="1"
+        eType="#//Capability"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="versions" upperBound="-1"
+        eType="#//VersionRange" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CapabilityProvider" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//DocumentedNamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providedCapabilities" upperBound="-1"
+        eType="#//Capability"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requirements" upperBound="-1"
+        eType="#//Requirement" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

@@ -12,5 +12,6 @@ Export-Package: org.nasdanika.models.capability,
  org.nasdanika.models.capability.impl,
  org.nasdanika.models.capability.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.nasdanika.ncore;visibility:=reexport
 Bundle-ActivationPolicy: lazy

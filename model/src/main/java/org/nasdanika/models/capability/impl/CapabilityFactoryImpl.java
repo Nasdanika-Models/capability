@@ -57,6 +57,12 @@ public class CapabilityFactoryImpl extends EFactoryImpl implements CapabilityFac
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case CapabilityPackage.CAPABILITY: return createCapability();
+			case CapabilityPackage.VERSION: return createVersion();
+			case CapabilityPackage.CAPABILITY_VERSION: return createCapabilityVersion();
+			case CapabilityPackage.REQUIREMENT: return createRequirement();
+			case CapabilityPackage.VERSION_RANGE: return createVersionRange();
+			case CapabilityPackage.CAPABILITY_REQUIREMENT: return createCapabilityRequirement();
+			case CapabilityPackage.CAPABILITY_PROVIDER: return createCapabilityProvider();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -71,6 +77,72 @@ public class CapabilityFactoryImpl extends EFactoryImpl implements CapabilityFac
 	public Capability createCapability() {
 		CapabilityImpl capability = new CapabilityImpl();
 		return capability;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Version createVersion() {
+		VersionImpl version = new VersionImpl();
+		return version;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public CapabilityVersion createCapabilityVersion() {
+		CapabilityVersionImpl capabilityVersion = new CapabilityVersionImpl();
+		return capabilityVersion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Requirement createRequirement() {
+		RequirementImpl requirement = new RequirementImpl();
+		return requirement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VersionRange createVersionRange() {
+		VersionRangeImpl versionRange = new VersionRangeImpl();
+		return versionRange;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public CapabilityRequirement createCapabilityRequirement() {
+		CapabilityRequirementImpl capabilityRequirement = new CapabilityRequirementImpl();
+		return capabilityRequirement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public CapabilityProvider createCapabilityProvider() {
+		CapabilityProviderImpl capabilityProvider = new CapabilityProviderImpl();
+		return capabilityProvider;
 	}
 
 	/**

@@ -31,6 +31,60 @@ public interface CapabilityFactory extends EFactory {
 	Capability createCapability();
 
 	/**
+	 * Returns a new object of class '<em>Version</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Version</em>'.
+	 * @generated
+	 */
+	Version createVersion();
+
+	/**
+	 * Returns a new object of class '<em>Version</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Version</em>'.
+	 * @generated
+	 */
+	CapabilityVersion createCapabilityVersion();
+
+	/**
+	 * Returns a new object of class '<em>Requirement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Requirement</em>'.
+	 * @generated
+	 */
+	Requirement createRequirement();
+
+	/**
+	 * Returns a new object of class '<em>Version Range</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Version Range</em>'.
+	 * @generated
+	 */
+	VersionRange createVersionRange();
+
+	/**
+	 * Returns a new object of class '<em>Requirement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Requirement</em>'.
+	 * @generated
+	 */
+	CapabilityRequirement createCapabilityRequirement();
+
+	/**
+	 * Returns a new object of class '<em>Provider</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Provider</em>'.
+	 * @generated
+	 */
+	CapabilityProvider createCapabilityProvider();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
