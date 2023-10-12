@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.nasdanika.models.capability.Capability;
 import org.nasdanika.models.capability.CapabilityPackage;
 import org.nasdanika.models.capability.CapabilityVersion;
-import org.nasdanika.ncore.impl.DocumentedNamedElementImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +28,7 @@ import org.nasdanika.ncore.impl.DocumentedNamedElementImpl;
  *
  * @generated
  */
-public class CapabilityImpl extends DocumentedNamedElementImpl implements Capability {
+public class CapabilityImpl extends CapabilityDomainElementImpl implements Capability {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

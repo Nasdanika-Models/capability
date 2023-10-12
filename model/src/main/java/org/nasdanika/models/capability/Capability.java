@@ -3,7 +3,6 @@
 package org.nasdanika.models.capability;
 
 import org.eclipse.emf.common.util.EList;
-import org.nasdanika.ncore.DocumentedNamedElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +26,7 @@ import org.nasdanika.ncore.DocumentedNamedElement;
  * @model
  * @generated
  */
-public interface Capability extends DocumentedNamedElement {
+public interface Capability extends CapabilityDomainElement {
 
 	/**
 	 * Returns the value of the '<em><b>Versions</b></em>' containment reference list.

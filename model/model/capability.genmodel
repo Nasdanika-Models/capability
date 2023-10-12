@@ -9,6 +9,10 @@
   <foreignModel>capability.ecore</foreignModel>
   <genPackages prefix="Capability" basePackage="org.nasdanika.models" disposableProviderFactory="true"
       ecorePackage="capability.ecore#/">
+    <genClasses image="false" ecoreClass="capability.ecore#//CapabilityDomainElement"/>
+    <genClasses image="false" ecoreClass="capability.ecore#//CapabilityDomain">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference capability.ecore#//CapabilityDomain/capabilities"/>
+    </genClasses>
     <genClasses ecoreClass="capability.ecore#//Capability">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference capability.ecore#//Capability/versions"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference capability.ecore#//Capability/includes"/>

@@ -14,8 +14,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.nasdanika.models.capability.Capability;
+import org.nasdanika.models.capability.CapabilityDomainElement;
 import org.nasdanika.models.capability.CapabilityPackage;
 import org.nasdanika.models.capability.CapabilityVersion;
+import org.nasdanika.ncore.DocumentedNamedElementWithID;
+import org.nasdanika.ncore.NcorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,6 +28,7 @@ import org.nasdanika.models.capability.CapabilityVersion;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.nasdanika.models.capability.impl.CapabilityVersionImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.nasdanika.models.capability.impl.CapabilityVersionImpl#getVersions <em>Versions</em>}</li>
  *   <li>{@link org.nasdanika.models.capability.impl.CapabilityVersionImpl#getIncludes <em>Includes</em>}</li>
  *   <li>{@link org.nasdanika.models.capability.impl.CapabilityVersionImpl#getIncludedIn <em>Included In</em>}</li>
@@ -33,6 +37,16 @@ import org.nasdanika.models.capability.CapabilityVersion;
  * @generated
  */
 public class CapabilityVersionImpl extends VersionImpl implements CapabilityVersion {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -50,6 +64,26 @@ public class CapabilityVersionImpl extends VersionImpl implements CapabilityVers
 	@Override
 	protected EClass eStaticClass() {
 		return CapabilityPackage.Literals.CAPABILITY_VERSION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getId() {
+		return (String)eDynamicGet(CapabilityPackage.CAPABILITY_VERSION__ID, NcorePackage.Literals.DOCUMENTED_NAMED_ELEMENT_WITH_ID__ID, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setId(String newId) {
+		eDynamicSet(CapabilityPackage.CAPABILITY_VERSION__ID, NcorePackage.Literals.DOCUMENTED_NAMED_ELEMENT_WITH_ID__ID, newId);
 	}
 
 	/**
@@ -128,6 +162,8 @@ public class CapabilityVersionImpl extends VersionImpl implements CapabilityVers
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case CapabilityPackage.CAPABILITY_VERSION__ID:
+				return getId();
 			case CapabilityPackage.CAPABILITY_VERSION__VERSIONS:
 				return getVersions();
 			case CapabilityPackage.CAPABILITY_VERSION__INCLUDES:
@@ -147,6 +183,9 @@ public class CapabilityVersionImpl extends VersionImpl implements CapabilityVers
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case CapabilityPackage.CAPABILITY_VERSION__ID:
+				setId((String)newValue);
+				return;
 			case CapabilityPackage.CAPABILITY_VERSION__VERSIONS:
 				getVersions().clear();
 				getVersions().addAll((Collection<? extends CapabilityVersion>)newValue);
@@ -171,6 +210,9 @@ public class CapabilityVersionImpl extends VersionImpl implements CapabilityVers
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case CapabilityPackage.CAPABILITY_VERSION__ID:
+				setId(ID_EDEFAULT);
+				return;
 			case CapabilityPackage.CAPABILITY_VERSION__VERSIONS:
 				getVersions().clear();
 				return;
@@ -192,6 +234,8 @@ public class CapabilityVersionImpl extends VersionImpl implements CapabilityVers
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case CapabilityPackage.CAPABILITY_VERSION__ID:
+				return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
 			case CapabilityPackage.CAPABILITY_VERSION__VERSIONS:
 				return !getVersions().isEmpty();
 			case CapabilityPackage.CAPABILITY_VERSION__INCLUDES:
@@ -209,6 +253,17 @@ public class CapabilityVersionImpl extends VersionImpl implements CapabilityVers
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == DocumentedNamedElementWithID.class) {
+			switch (derivedFeatureID) {
+				case CapabilityPackage.CAPABILITY_VERSION__ID: return NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__ID;
+				default: return -1;
+			}
+		}
+		if (baseClass == CapabilityDomainElement.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
 		if (baseClass == Capability.class) {
 			switch (derivedFeatureID) {
 				case CapabilityPackage.CAPABILITY_VERSION__VERSIONS: return CapabilityPackage.CAPABILITY__VERSIONS;
@@ -227,6 +282,17 @@ public class CapabilityVersionImpl extends VersionImpl implements CapabilityVers
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == DocumentedNamedElementWithID.class) {
+			switch (baseFeatureID) {
+				case NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__ID: return CapabilityPackage.CAPABILITY_VERSION__ID;
+				default: return -1;
+			}
+		}
+		if (baseClass == CapabilityDomainElement.class) {
+			switch (baseFeatureID) {
+				default: return -1;
+			}
+		}
 		if (baseClass == Capability.class) {
 			switch (baseFeatureID) {
 				case CapabilityPackage.CAPABILITY__VERSIONS: return CapabilityPackage.CAPABILITY_VERSION__VERSIONS;

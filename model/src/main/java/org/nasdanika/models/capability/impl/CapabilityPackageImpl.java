@@ -10,6 +10,8 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.nasdanika.models.capability.Capability;
+import org.nasdanika.models.capability.CapabilityDomain;
+import org.nasdanika.models.capability.CapabilityDomainElement;
 import org.nasdanika.models.capability.CapabilityFactory;
 import org.nasdanika.models.capability.CapabilityPackage;
 import org.nasdanika.models.capability.CapabilityProvider;
@@ -28,6 +30,20 @@ import org.nasdanika.ncore.NcorePackage;
  * @generated
  */
 public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass capabilityDomainElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass capabilityDomainEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -140,6 +156,36 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(CapabilityPackage.eNS_URI, theCapabilityPackage);
 		return theCapabilityPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCapabilityDomainElement() {
+		return capabilityDomainElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCapabilityDomain() {
+		return capabilityDomainEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCapabilityDomain_Capabilities() {
+		return (EReference)capabilityDomainEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -381,6 +427,11 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 		isCreated = true;
 
 		// Create classes and their features
+		capabilityDomainElementEClass = createEClass(CAPABILITY_DOMAIN_ELEMENT);
+
+		capabilityDomainEClass = createEClass(CAPABILITY_DOMAIN);
+		createEReference(capabilityDomainEClass, CAPABILITY_DOMAIN__CAPABILITIES);
+
 		capabilityEClass = createEClass(CAPABILITY);
 		createEReference(capabilityEClass, CAPABILITY__VERSIONS);
 		createEReference(capabilityEClass, CAPABILITY__INCLUDES);
@@ -442,7 +493,9 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		capabilityEClass.getESuperTypes().add(theNcorePackage.getDocumentedNamedElement());
+		capabilityDomainElementEClass.getESuperTypes().add(theNcorePackage.getDocumentedNamedElementWithID());
+		capabilityDomainEClass.getESuperTypes().add(this.getCapabilityDomainElement());
+		capabilityEClass.getESuperTypes().add(this.getCapabilityDomainElement());
 		versionEClass.getESuperTypes().add(theNcorePackage.getDocumentedNamedElement());
 		capabilityVersionEClass.getESuperTypes().add(this.getVersion());
 		capabilityVersionEClass.getESuperTypes().add(this.getCapability());
@@ -452,6 +505,11 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 		capabilityProviderEClass.getESuperTypes().add(this.getRequirementConsumer());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(capabilityDomainElementEClass, CapabilityDomainElement.class, "CapabilityDomainElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(capabilityDomainEClass, CapabilityDomain.class, "CapabilityDomain", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCapabilityDomain_Capabilities(), this.getCapabilityDomainElement(), null, "capabilities", null, 0, -1, CapabilityDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(capabilityEClass, Capability.class, "Capability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCapability_Versions(), this.getCapabilityVersion(), null, "versions", null, 0, -1, Capability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCapability_Includes(), this.getCapability(), this.getCapability_IncludedIn(), "includes", null, 0, -1, Capability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -497,6 +555,18 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 	 */
 	protected void createGenModelAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/GenModel";
+		addAnnotation
+		  (capabilityDomainEClass,
+		   source,
+		   new String[] {
+			   "documentation", "A group of artifacts"
+		   });
+		addAnnotation
+		  (getCapabilityDomain_Capabilities(),
+		   source,
+		   new String[] {
+			   "documentation", "Artifacts used in this package and sub-packages"
+		   });
 		addAnnotation
 		  (capabilityEClass,
 		   source,

@@ -13,6 +13,7 @@ import org.nasdanika.common.Adaptable;
 import org.nasdanika.models.capability.*;
 import org.nasdanika.ncore.Documented;
 import org.nasdanika.ncore.DocumentedNamedElement;
+import org.nasdanika.ncore.DocumentedNamedElementWithID;
 import org.nasdanika.ncore.ModelElement;
 import org.nasdanika.ncore.NamedElement;
 import org.nasdanika.persistence.Marked;
@@ -74,6 +75,14 @@ public class CapabilityAdapterFactory extends AdapterFactoryImpl {
 	protected CapabilitySwitch<Adapter> modelSwitch =
 		new CapabilitySwitch<Adapter>() {
 			@Override
+			public Adapter caseCapabilityDomainElement(CapabilityDomainElement object) {
+				return createCapabilityDomainElementAdapter();
+			}
+			@Override
+			public Adapter caseCapabilityDomain(CapabilityDomain object) {
+				return createCapabilityDomainAdapter();
+			}
+			@Override
 			public Adapter caseCapability(Capability object) {
 				return createCapabilityAdapter();
 			}
@@ -134,6 +143,10 @@ public class CapabilityAdapterFactory extends AdapterFactoryImpl {
 				return createDocumentedNamedElementAdapter();
 			}
 			@Override
+			public Adapter caseDocumentedNamedElementWithID(DocumentedNamedElementWithID object) {
+				return createDocumentedNamedElementWithIDAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -152,6 +165,34 @@ public class CapabilityAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.capability.CapabilityDomainElement <em>Domain Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.capability.CapabilityDomainElement
+	 * @generated
+	 */
+	public Adapter createCapabilityDomainElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.capability.CapabilityDomain <em>Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.capability.CapabilityDomain
+	 * @generated
+	 */
+	public Adapter createCapabilityDomainAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.capability.Capability <em>Capability</em>}'.
@@ -360,6 +401,20 @@ public class CapabilityAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDocumentedNamedElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.ncore.DocumentedNamedElementWithID <em>Documented Named Element With ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.ncore.DocumentedNamedElementWithID
+	 * @generated
+	 */
+	public Adapter createDocumentedNamedElementWithIDAdapter() {
 		return null;
 	}
 

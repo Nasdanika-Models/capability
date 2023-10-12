@@ -2,7 +2,20 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="capability" nsURI="ecore://nasdanika.org/models/capability"
     nsPrefix="org.nasdanika.models.capability">
-  <eClassifiers xsi:type="ecore:EClass" name="Capability" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//DocumentedNamedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="CapabilityDomainElement" abstract="true"
+      eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//DocumentedNamedElementWithID"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CapabilityDomain" abstract="true" eSuperTypes="#//CapabilityDomainElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A group of artifacts"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capabilities" upperBound="-1"
+        eType="#//CapabilityDomainElement" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Artifacts used in this package and sub-packages"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Capability" eSuperTypes="#//CapabilityDomainElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Ability to do something. Skill, authorization, software component."/>
     </eAnnotations>

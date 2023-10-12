@@ -11,6 +11,7 @@ import org.nasdanika.common.Adaptable;
 import org.nasdanika.models.capability.*;
 import org.nasdanika.ncore.Documented;
 import org.nasdanika.ncore.DocumentedNamedElement;
+import org.nasdanika.ncore.DocumentedNamedElementWithID;
 import org.nasdanika.ncore.ModelElement;
 import org.nasdanika.ncore.NamedElement;
 import org.nasdanika.persistence.Marked;
@@ -72,9 +73,40 @@ public class CapabilitySwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case CapabilityPackage.CAPABILITY_DOMAIN_ELEMENT: {
+				CapabilityDomainElement capabilityDomainElement = (CapabilityDomainElement)theEObject;
+				T result = caseCapabilityDomainElement(capabilityDomainElement);
+				if (result == null) result = caseDocumentedNamedElementWithID(capabilityDomainElement);
+				if (result == null) result = caseDocumentedNamedElement(capabilityDomainElement);
+				if (result == null) result = caseNamedElement(capabilityDomainElement);
+				if (result == null) result = caseDocumented(capabilityDomainElement);
+				if (result == null) result = caseModelElement(capabilityDomainElement);
+				if (result == null) result = caseMarked(capabilityDomainElement);
+				if (result == null) result = caseAdaptable(capabilityDomainElement);
+				if (result == null) result = caseIMarked(capabilityDomainElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CapabilityPackage.CAPABILITY_DOMAIN: {
+				CapabilityDomain capabilityDomain = (CapabilityDomain)theEObject;
+				T result = caseCapabilityDomain(capabilityDomain);
+				if (result == null) result = caseCapabilityDomainElement(capabilityDomain);
+				if (result == null) result = caseDocumentedNamedElementWithID(capabilityDomain);
+				if (result == null) result = caseDocumentedNamedElement(capabilityDomain);
+				if (result == null) result = caseNamedElement(capabilityDomain);
+				if (result == null) result = caseDocumented(capabilityDomain);
+				if (result == null) result = caseModelElement(capabilityDomain);
+				if (result == null) result = caseMarked(capabilityDomain);
+				if (result == null) result = caseAdaptable(capabilityDomain);
+				if (result == null) result = caseIMarked(capabilityDomain);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case CapabilityPackage.CAPABILITY: {
 				Capability capability = (Capability)theEObject;
 				T result = caseCapability(capability);
+				if (result == null) result = caseCapabilityDomainElement(capability);
+				if (result == null) result = caseDocumentedNamedElementWithID(capability);
 				if (result == null) result = caseDocumentedNamedElement(capability);
 				if (result == null) result = caseNamedElement(capability);
 				if (result == null) result = caseDocumented(capability);
@@ -103,9 +135,11 @@ public class CapabilitySwitch<T> extends Switch<T> {
 				T result = caseCapabilityVersion(capabilityVersion);
 				if (result == null) result = caseVersion(capabilityVersion);
 				if (result == null) result = caseCapability(capabilityVersion);
-				if (result == null) result = caseDocumentedNamedElement(capabilityVersion);
+				if (result == null) result = caseCapabilityDomainElement(capabilityVersion);
 				if (result == null) result = caseNamedElement(capabilityVersion);
 				if (result == null) result = caseDocumented(capabilityVersion);
+				if (result == null) result = caseDocumentedNamedElementWithID(capabilityVersion);
+				if (result == null) result = caseDocumentedNamedElement(capabilityVersion);
 				if (result == null) result = caseModelElement(capabilityVersion);
 				if (result == null) result = caseMarked(capabilityVersion);
 				if (result == null) result = caseAdaptable(capabilityVersion);
@@ -168,6 +202,36 @@ public class CapabilitySwitch<T> extends Switch<T> {
 			}
 			default: return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Domain Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Domain Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCapabilityDomainElement(CapabilityDomainElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Domain</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Domain</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCapabilityDomain(CapabilityDomain object) {
+		return null;
 	}
 
 	/**
@@ -392,6 +456,21 @@ public class CapabilitySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDocumentedNamedElement(DocumentedNamedElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Documented Named Element With ID</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Documented Named Element With ID</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDocumentedNamedElementWithID(DocumentedNamedElementWithID object) {
 		return null;
 	}
 

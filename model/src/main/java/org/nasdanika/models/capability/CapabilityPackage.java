@@ -58,14 +58,14 @@ public interface CapabilityPackage extends EPackage {
 	CapabilityPackage eINSTANCE = org.nasdanika.models.capability.impl.CapabilityPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.nasdanika.models.capability.impl.CapabilityImpl <em>Capability</em>}' class.
+	 * The meta object id for the '{@link org.nasdanika.models.capability.impl.CapabilityDomainElementImpl <em>Domain Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.nasdanika.models.capability.impl.CapabilityImpl
-	 * @see org.nasdanika.models.capability.impl.CapabilityPackageImpl#getCapability()
+	 * @see org.nasdanika.models.capability.impl.CapabilityDomainElementImpl
+	 * @see org.nasdanika.models.capability.impl.CapabilityPackageImpl#getCapabilityDomainElement()
 	 * @generated
 	 */
-	int CAPABILITY = 0;
+	int CAPABILITY_DOMAIN_ELEMENT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -74,7 +74,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY__MARKERS = NcorePackage.DOCUMENTED_NAMED_ELEMENT__MARKERS;
+	int CAPABILITY_DOMAIN_ELEMENT__MARKERS = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__MARKERS;
 
 	/**
 	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
@@ -83,7 +83,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY__URIS = NcorePackage.DOCUMENTED_NAMED_ELEMENT__URIS;
+	int CAPABILITY_DOMAIN_ELEMENT__URIS = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -92,7 +92,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY__DESCRIPTION = NcorePackage.DOCUMENTED_NAMED_ELEMENT__DESCRIPTION;
+	int CAPABILITY_DOMAIN_ELEMENT__DESCRIPTION = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
@@ -101,7 +101,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY__UUID = NcorePackage.DOCUMENTED_NAMED_ELEMENT__UUID;
+	int CAPABILITY_DOMAIN_ELEMENT__UUID = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
@@ -110,7 +110,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY__LABEL_PROTOTYPE = NcorePackage.DOCUMENTED_NAMED_ELEMENT__LABEL_PROTOTYPE;
+	int CAPABILITY_DOMAIN_ELEMENT__LABEL_PROTOTYPE = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -119,7 +119,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY__REPRESENTATIONS = NcorePackage.DOCUMENTED_NAMED_ELEMENT__REPRESENTATIONS;
+	int CAPABILITY_DOMAIN_ELEMENT__REPRESENTATIONS = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__REPRESENTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
@@ -128,7 +128,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY__ANNOTATIONS = NcorePackage.DOCUMENTED_NAMED_ELEMENT__ANNOTATIONS;
+	int CAPABILITY_DOMAIN_ELEMENT__ANNOTATIONS = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -137,7 +137,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY__NAME = NcorePackage.DOCUMENTED_NAMED_ELEMENT__NAME;
+	int CAPABILITY_DOMAIN_ELEMENT__NAME = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
@@ -146,7 +146,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY__DOCUMENTATION = NcorePackage.DOCUMENTED_NAMED_ELEMENT__DOCUMENTATION;
+	int CAPABILITY_DOMAIN_ELEMENT__DOCUMENTATION = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
@@ -155,7 +155,279 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY__CONTEXT_HELP = NcorePackage.DOCUMENTED_NAMED_ELEMENT__CONTEXT_HELP;
+	int CAPABILITY_DOMAIN_ELEMENT__CONTEXT_HELP = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__CONTEXT_HELP;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_DOMAIN_ELEMENT__ID = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__ID;
+
+	/**
+	 * The number of structural features of the '<em>Domain Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_DOMAIN_ELEMENT_FEATURE_COUNT = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Domain Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_DOMAIN_ELEMENT_OPERATION_COUNT = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.models.capability.impl.CapabilityDomainImpl <em>Domain</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.capability.impl.CapabilityDomainImpl
+	 * @see org.nasdanika.models.capability.impl.CapabilityPackageImpl#getCapabilityDomain()
+	 * @generated
+	 */
+	int CAPABILITY_DOMAIN = 1;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_DOMAIN__MARKERS = CAPABILITY_DOMAIN_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_DOMAIN__URIS = CAPABILITY_DOMAIN_ELEMENT__URIS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_DOMAIN__DESCRIPTION = CAPABILITY_DOMAIN_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_DOMAIN__UUID = CAPABILITY_DOMAIN_ELEMENT__UUID;
+
+	/**
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_DOMAIN__LABEL_PROTOTYPE = CAPABILITY_DOMAIN_ELEMENT__LABEL_PROTOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Representations</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_DOMAIN__REPRESENTATIONS = CAPABILITY_DOMAIN_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_DOMAIN__ANNOTATIONS = CAPABILITY_DOMAIN_ELEMENT__ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_DOMAIN__NAME = CAPABILITY_DOMAIN_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_DOMAIN__DOCUMENTATION = CAPABILITY_DOMAIN_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_DOMAIN__CONTEXT_HELP = CAPABILITY_DOMAIN_ELEMENT__CONTEXT_HELP;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_DOMAIN__ID = CAPABILITY_DOMAIN_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Capabilities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_DOMAIN__CAPABILITIES = CAPABILITY_DOMAIN_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_DOMAIN_FEATURE_COUNT = CAPABILITY_DOMAIN_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_DOMAIN_OPERATION_COUNT = CAPABILITY_DOMAIN_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.models.capability.impl.CapabilityImpl <em>Capability</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.models.capability.impl.CapabilityImpl
+	 * @see org.nasdanika.models.capability.impl.CapabilityPackageImpl#getCapability()
+	 * @generated
+	 */
+	int CAPABILITY = 2;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY__MARKERS = CAPABILITY_DOMAIN_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY__URIS = CAPABILITY_DOMAIN_ELEMENT__URIS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY__DESCRIPTION = CAPABILITY_DOMAIN_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY__UUID = CAPABILITY_DOMAIN_ELEMENT__UUID;
+
+	/**
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY__LABEL_PROTOTYPE = CAPABILITY_DOMAIN_ELEMENT__LABEL_PROTOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Representations</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY__REPRESENTATIONS = CAPABILITY_DOMAIN_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY__ANNOTATIONS = CAPABILITY_DOMAIN_ELEMENT__ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY__NAME = CAPABILITY_DOMAIN_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY__DOCUMENTATION = CAPABILITY_DOMAIN_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY__CONTEXT_HELP = CAPABILITY_DOMAIN_ELEMENT__CONTEXT_HELP;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY__ID = CAPABILITY_DOMAIN_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Versions</b></em>' containment reference list.
@@ -164,7 +436,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY__VERSIONS = NcorePackage.DOCUMENTED_NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int CAPABILITY__VERSIONS = CAPABILITY_DOMAIN_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Includes</b></em>' reference list.
@@ -173,7 +445,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY__INCLUDES = NcorePackage.DOCUMENTED_NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int CAPABILITY__INCLUDES = CAPABILITY_DOMAIN_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Included In</b></em>' reference list.
@@ -182,7 +454,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY__INCLUDED_IN = NcorePackage.DOCUMENTED_NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int CAPABILITY__INCLUDED_IN = CAPABILITY_DOMAIN_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Capability</em>' class.
@@ -191,7 +463,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_FEATURE_COUNT = NcorePackage.DOCUMENTED_NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int CAPABILITY_FEATURE_COUNT = CAPABILITY_DOMAIN_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Capability</em>' class.
@@ -200,7 +472,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_OPERATION_COUNT = NcorePackage.DOCUMENTED_NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int CAPABILITY_OPERATION_COUNT = CAPABILITY_DOMAIN_ELEMENT_OPERATION_COUNT + 0;
 
 
 	/**
@@ -211,7 +483,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @see org.nasdanika.models.capability.impl.CapabilityPackageImpl#getVersion()
 	 * @generated
 	 */
-	int VERSION = 1;
+	int VERSION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -329,7 +601,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @see org.nasdanika.models.capability.impl.CapabilityPackageImpl#getCapabilityVersion()
 	 * @generated
 	 */
-	int CAPABILITY_VERSION = 2;
+	int CAPABILITY_VERSION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -422,13 +694,22 @@ public interface CapabilityPackage extends EPackage {
 	int CAPABILITY_VERSION__CONTEXT_HELP = VERSION__CONTEXT_HELP;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_VERSION__ID = VERSION_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Versions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_VERSION__VERSIONS = VERSION_FEATURE_COUNT + 0;
+	int CAPABILITY_VERSION__VERSIONS = VERSION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Includes</b></em>' reference list.
@@ -437,7 +718,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_VERSION__INCLUDES = VERSION_FEATURE_COUNT + 1;
+	int CAPABILITY_VERSION__INCLUDES = VERSION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Included In</b></em>' reference list.
@@ -446,7 +727,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_VERSION__INCLUDED_IN = VERSION_FEATURE_COUNT + 2;
+	int CAPABILITY_VERSION__INCLUDED_IN = VERSION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Version</em>' class.
@@ -455,7 +736,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_VERSION_FEATURE_COUNT = VERSION_FEATURE_COUNT + 3;
+	int CAPABILITY_VERSION_FEATURE_COUNT = VERSION_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Version</em>' class.
@@ -474,7 +755,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @see org.nasdanika.models.capability.impl.CapabilityPackageImpl#getRequirement()
 	 * @generated
 	 */
-	int REQUIREMENT = 3;
+	int REQUIREMENT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -592,7 +873,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @see org.nasdanika.models.capability.impl.CapabilityPackageImpl#getRequirementConsumer()
 	 * @generated
 	 */
-	int REQUIREMENT_CONSUMER = 4;
+	int REQUIREMENT_CONSUMER = 6;
 
 	/**
 	 * The feature id for the '<em><b>Requirements</b></em>' containment reference list.
@@ -629,7 +910,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @see org.nasdanika.models.capability.impl.CapabilityPackageImpl#getVersionRange()
 	 * @generated
 	 */
-	int VERSION_RANGE = 5;
+	int VERSION_RANGE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Minimum</b></em>' reference.
@@ -693,7 +974,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @see org.nasdanika.models.capability.impl.CapabilityPackageImpl#getCapabilityRequirement()
 	 * @generated
 	 */
-	int CAPABILITY_REQUIREMENT = 6;
+	int CAPABILITY_REQUIREMENT = 8;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -847,7 +1128,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @see org.nasdanika.models.capability.impl.CapabilityPackageImpl#getCapabilityProvider()
 	 * @generated
 	 */
-	int CAPABILITY_PROVIDER = 7;
+	int CAPABILITY_PROVIDER = 9;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -975,6 +1256,37 @@ public interface CapabilityPackage extends EPackage {
 	 */
 	int CAPABILITY_PROVIDER_OPERATION_COUNT = NcorePackage.DOCUMENTED_NAMED_ELEMENT_OPERATION_COUNT + 0;
 
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.capability.CapabilityDomainElement <em>Domain Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Domain Element</em>'.
+	 * @see org.nasdanika.models.capability.CapabilityDomainElement
+	 * @generated
+	 */
+	EClass getCapabilityDomainElement();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.models.capability.CapabilityDomain <em>Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Domain</em>'.
+	 * @see org.nasdanika.models.capability.CapabilityDomain
+	 * @generated
+	 */
+	EClass getCapabilityDomain();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.capability.CapabilityDomain#getCapabilities <em>Capabilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Capabilities</em>'.
+	 * @see org.nasdanika.models.capability.CapabilityDomain#getCapabilities()
+	 * @see #getCapabilityDomain()
+	 * @generated
+	 */
+	EReference getCapabilityDomain_Capabilities();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.capability.Capability <em>Capability</em>}'.
@@ -1222,6 +1534,31 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.capability.impl.CapabilityDomainElementImpl <em>Domain Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.capability.impl.CapabilityDomainElementImpl
+		 * @see org.nasdanika.models.capability.impl.CapabilityPackageImpl#getCapabilityDomainElement()
+		 * @generated
+		 */
+		EClass CAPABILITY_DOMAIN_ELEMENT = eINSTANCE.getCapabilityDomainElement();
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.models.capability.impl.CapabilityDomainImpl <em>Domain</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.models.capability.impl.CapabilityDomainImpl
+		 * @see org.nasdanika.models.capability.impl.CapabilityPackageImpl#getCapabilityDomain()
+		 * @generated
+		 */
+		EClass CAPABILITY_DOMAIN = eINSTANCE.getCapabilityDomain();
+		/**
+		 * The meta object literal for the '<em><b>Capabilities</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CAPABILITY_DOMAIN__CAPABILITIES = eINSTANCE.getCapabilityDomain_Capabilities();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.capability.impl.CapabilityImpl <em>Capability</em>}' class.
 		 * <!-- begin-user-doc -->
