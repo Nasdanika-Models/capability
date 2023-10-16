@@ -1,4 +1,4 @@
-package org.nasdanika.models.capability.processors;
+package org.nasdanika.models.capability.processors.ecore;
 
 import org.nasdanika.common.Context;
 import org.nasdanika.models.capability.CapabilityPackage;
