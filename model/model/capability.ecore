@@ -3,7 +3,7 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="capability" nsURI="ecore://nasdanika.org/models/capability"
     nsPrefix="org.nasdanika.models.capability">
   <eClassifiers xsi:type="ecore:EClass" name="CapabilityDomainElement" abstract="true"
-      eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//DocumentedNamedElementWithID"/>
+      eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//DocumentedNamedStringIdentity"/>
   <eClassifiers xsi:type="ecore:EClass" name="CapabilityDomain" abstract="true" eSuperTypes="#//CapabilityDomainElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="A group of artifacts"/>

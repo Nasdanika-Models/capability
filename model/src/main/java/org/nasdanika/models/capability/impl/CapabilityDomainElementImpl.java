@@ -3,10 +3,9 @@
 package org.nasdanika.models.capability.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.nasdanika.models.capability.CapabilityDomainElement;
 import org.nasdanika.models.capability.CapabilityPackage;
-import org.nasdanika.ncore.impl.DocumentedNamedElementWithIDImpl;
+import org.nasdanika.ncore.impl.DocumentedNamedStringIdentityImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,7 +14,7 @@ import org.nasdanika.ncore.impl.DocumentedNamedElementWithIDImpl;
  *
  * @generated
  */
-public abstract class CapabilityDomainElementImpl extends DocumentedNamedElementWithIDImpl implements CapabilityDomainElement {
+public abstract class CapabilityDomainElementImpl extends DocumentedNamedStringIdentityImpl implements CapabilityDomainElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

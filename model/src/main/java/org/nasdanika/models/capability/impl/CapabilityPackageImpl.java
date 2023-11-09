@@ -493,7 +493,7 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		capabilityDomainElementEClass.getESuperTypes().add(theNcorePackage.getDocumentedNamedElementWithID());
+		capabilityDomainElementEClass.getESuperTypes().add(theNcorePackage.getDocumentedNamedStringIdentity());
 		capabilityDomainEClass.getESuperTypes().add(this.getCapabilityDomainElement());
 		capabilityEClass.getESuperTypes().add(this.getCapabilityDomainElement());
 		versionEClass.getESuperTypes().add(theNcorePackage.getDocumentedNamedElement());

@@ -2,7 +2,7 @@
  */
 package org.nasdanika.models.capability;
 
-import org.nasdanika.ncore.DocumentedNamedElementWithID;
+import org.nasdanika.ncore.DocumentedNamedStringIdentity;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,6 +14,6 @@ import org.nasdanika.ncore.DocumentedNamedElementWithID;
  * @model abstract="true"
  * @generated
  */
-public interface CapabilityDomainElement extends DocumentedNamedElementWithID {
+public interface CapabilityDomainElement extends DocumentedNamedStringIdentity {
 
 } // CapabilityDomainElement

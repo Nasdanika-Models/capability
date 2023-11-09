@@ -17,8 +17,9 @@ import org.nasdanika.models.capability.Capability;
 import org.nasdanika.models.capability.CapabilityDomainElement;
 import org.nasdanika.models.capability.CapabilityPackage;
 import org.nasdanika.models.capability.CapabilityVersion;
-import org.nasdanika.ncore.DocumentedNamedElementWithID;
+import org.nasdanika.ncore.DocumentedNamedStringIdentity;
 import org.nasdanika.ncore.NcorePackage;
+import org.nasdanika.ncore.StringIdentity;
 
 /**
  * <!-- begin-user-doc -->
@@ -73,7 +74,7 @@ public class CapabilityVersionImpl extends VersionImpl implements CapabilityVers
 	 */
 	@Override
 	public String getId() {
-		return (String)eDynamicGet(CapabilityPackage.CAPABILITY_VERSION__ID, NcorePackage.Literals.DOCUMENTED_NAMED_ELEMENT_WITH_ID__ID, true, true);
+		return (String)eDynamicGet(CapabilityPackage.CAPABILITY_VERSION__ID, NcorePackage.Literals.STRING_IDENTITY__ID, true, true);
 	}
 
 	/**
@@ -83,7 +84,7 @@ public class CapabilityVersionImpl extends VersionImpl implements CapabilityVers
 	 */
 	@Override
 	public void setId(String newId) {
-		eDynamicSet(CapabilityPackage.CAPABILITY_VERSION__ID, NcorePackage.Literals.DOCUMENTED_NAMED_ELEMENT_WITH_ID__ID, newId);
+		eDynamicSet(CapabilityPackage.CAPABILITY_VERSION__ID, NcorePackage.Literals.STRING_IDENTITY__ID, newId);
 	}
 
 	/**
@@ -253,9 +254,14 @@ public class CapabilityVersionImpl extends VersionImpl implements CapabilityVers
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == DocumentedNamedElementWithID.class) {
+		if (baseClass == StringIdentity.class) {
 			switch (derivedFeatureID) {
-				case CapabilityPackage.CAPABILITY_VERSION__ID: return NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__ID;
+				case CapabilityPackage.CAPABILITY_VERSION__ID: return NcorePackage.STRING_IDENTITY__ID;
+				default: return -1;
+			}
+		}
+		if (baseClass == DocumentedNamedStringIdentity.class) {
+			switch (derivedFeatureID) {
 				default: return -1;
 			}
 		}
@@ -282,9 +288,14 @@ public class CapabilityVersionImpl extends VersionImpl implements CapabilityVers
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == DocumentedNamedElementWithID.class) {
+		if (baseClass == StringIdentity.class) {
 			switch (baseFeatureID) {
-				case NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__ID: return CapabilityPackage.CAPABILITY_VERSION__ID;
+				case NcorePackage.STRING_IDENTITY__ID: return CapabilityPackage.CAPABILITY_VERSION__ID;
+				default: return -1;
+			}
+		}
+		if (baseClass == DocumentedNamedStringIdentity.class) {
+			switch (baseFeatureID) {
 				default: return -1;
 			}
 		}

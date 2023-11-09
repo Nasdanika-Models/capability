@@ -74,7 +74,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN_ELEMENT__MARKERS = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__MARKERS;
+	int CAPABILITY_DOMAIN_ELEMENT__MARKERS = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__MARKERS;
 
 	/**
 	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
@@ -83,7 +83,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN_ELEMENT__URIS = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__URIS;
+	int CAPABILITY_DOMAIN_ELEMENT__URIS = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -92,7 +92,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN_ELEMENT__DESCRIPTION = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__DESCRIPTION;
+	int CAPABILITY_DOMAIN_ELEMENT__DESCRIPTION = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
@@ -101,7 +101,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN_ELEMENT__UUID = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__UUID;
+	int CAPABILITY_DOMAIN_ELEMENT__UUID = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
@@ -110,7 +110,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN_ELEMENT__LABEL_PROTOTYPE = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__LABEL_PROTOTYPE;
+	int CAPABILITY_DOMAIN_ELEMENT__LABEL_PROTOTYPE = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -119,7 +119,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN_ELEMENT__REPRESENTATIONS = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__REPRESENTATIONS;
+	int CAPABILITY_DOMAIN_ELEMENT__REPRESENTATIONS = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__REPRESENTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
@@ -128,7 +128,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN_ELEMENT__ANNOTATIONS = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__ANNOTATIONS;
+	int CAPABILITY_DOMAIN_ELEMENT__ANNOTATIONS = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -137,7 +137,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN_ELEMENT__NAME = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__NAME;
+	int CAPABILITY_DOMAIN_ELEMENT__NAME = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
@@ -146,7 +146,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN_ELEMENT__DOCUMENTATION = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__DOCUMENTATION;
+	int CAPABILITY_DOMAIN_ELEMENT__DOCUMENTATION = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Context Help</b></em>' containment reference list.
@@ -155,7 +155,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN_ELEMENT__CONTEXT_HELP = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__CONTEXT_HELP;
+	int CAPABILITY_DOMAIN_ELEMENT__CONTEXT_HELP = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__CONTEXT_HELP;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -164,7 +164,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN_ELEMENT__ID = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID__ID;
+	int CAPABILITY_DOMAIN_ELEMENT__ID = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY__ID;
 
 	/**
 	 * The number of structural features of the '<em>Domain Element</em>' class.
@@ -173,7 +173,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN_ELEMENT_FEATURE_COUNT = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID_FEATURE_COUNT + 0;
+	int CAPABILITY_DOMAIN_ELEMENT_FEATURE_COUNT = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Domain Element</em>' class.
@@ -182,7 +182,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN_ELEMENT_OPERATION_COUNT = NcorePackage.DOCUMENTED_NAMED_ELEMENT_WITH_ID_OPERATION_COUNT + 0;
+	int CAPABILITY_DOMAIN_ELEMENT_OPERATION_COUNT = NcorePackage.DOCUMENTED_NAMED_STRING_IDENTITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.capability.impl.CapabilityDomainImpl <em>Domain</em>}' class.

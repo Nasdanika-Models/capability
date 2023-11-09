@@ -13,9 +13,10 @@ import org.nasdanika.common.Adaptable;
 import org.nasdanika.models.capability.*;
 import org.nasdanika.ncore.Documented;
 import org.nasdanika.ncore.DocumentedNamedElement;
-import org.nasdanika.ncore.DocumentedNamedElementWithID;
+import org.nasdanika.ncore.DocumentedNamedStringIdentity;
 import org.nasdanika.ncore.ModelElement;
 import org.nasdanika.ncore.NamedElement;
+import org.nasdanika.ncore.StringIdentity;
 import org.nasdanika.persistence.Marked;
 
 /**
@@ -143,8 +144,12 @@ public class CapabilityAdapterFactory extends AdapterFactoryImpl {
 				return createDocumentedNamedElementAdapter();
 			}
 			@Override
-			public Adapter caseDocumentedNamedElementWithID(DocumentedNamedElementWithID object) {
-				return createDocumentedNamedElementWithIDAdapter();
+			public Adapter caseStringIdentity(StringIdentity object) {
+				return createStringIdentityAdapter();
+			}
+			@Override
+			public Adapter caseDocumentedNamedStringIdentity(DocumentedNamedStringIdentity object) {
+				return createDocumentedNamedStringIdentityAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -405,16 +410,30 @@ public class CapabilityAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.nasdanika.ncore.DocumentedNamedElementWithID <em>Documented Named Element With ID</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.ncore.StringIdentity <em>String Identity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.nasdanika.ncore.DocumentedNamedElementWithID
+	 * @see org.nasdanika.ncore.StringIdentity
 	 * @generated
 	 */
-	public Adapter createDocumentedNamedElementWithIDAdapter() {
+	public Adapter createStringIdentityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.ncore.DocumentedNamedStringIdentity <em>Documented Named String Identity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.ncore.DocumentedNamedStringIdentity
+	 * @generated
+	 */
+	public Adapter createDocumentedNamedStringIdentityAdapter() {
 		return null;
 	}
 
