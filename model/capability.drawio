@@ -1,6 +1,6 @@
 <mxfile compressed="false" host="Electron">
   <diagram id="03193e40-c9ee-4f61-bd82-a8922a690bba" name="capability">
-    <mxGraphModel dx="1911" dy="2019" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="2866" dy="2603" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -232,7 +232,7 @@
         </mxCell>
         <object label="DependencyKind" link="references/eClassifiers/DependencyKind/index.html" id="03872310-c4eb-48e0-8bbe-7e9b12e74b3d">
           <mxCell parent="1" vertex="1">
-            <mxGeometry height="30" width="120" y="800" as="geometry" />
+            <mxGeometry height="30" width="120" x="1002.3" y="-190" as="geometry" />
           </mxCell>
         </object>
         <mxCell id="4f76f65e-5613-4f31-bd32-a79eac46cc6c" edge="1" parent="1" source="03872310-c4eb-48e0-8bbe-7e9b12e74b3d" target="03872310-c4eb-48e0-8bbe-7e9b12e74b3d">
