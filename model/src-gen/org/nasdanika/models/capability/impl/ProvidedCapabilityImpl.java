@@ -9,7 +9,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -191,11 +190,6 @@ public class ProvidedCapabilityImpl extends NamedPeriodImpl implements ProvidedC
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == EObject.class) {
-			switch (derivedFeatureID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == AbstractEvidence.class) {
 			switch (derivedFeatureID) {
 				default: return -1;
@@ -217,11 +211,6 @@ public class ProvidedCapabilityImpl extends NamedPeriodImpl implements ProvidedC
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == EObject.class) {
-			switch (baseFeatureID) {
-				default: return -1;
-			}
-		}
 		if (baseClass == AbstractEvidence.class) {
 			switch (baseFeatureID) {
 				default: return -1;

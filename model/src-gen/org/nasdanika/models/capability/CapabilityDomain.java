@@ -4,7 +4,7 @@ package org.nasdanika.models.capability;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
+import org.nasdanika.models.nxcore.NamedElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,10 +20,10 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see org.nasdanika.models.capability.CapabilityPackage#getCapabilityDomain()
- * @model superTypes="org.eclipse.emf.ecore.EJavaObject org.nasdanika.models.capability.AbstractCapability"
+ * @model
  * @generated
  */
-public interface CapabilityDomain extends EObject, AbstractCapability {
+public interface CapabilityDomain extends NamedElement, AbstractCapability {
 	/**
 	 * Returns the value of the '<em><b>Capabilities</b></em>' containment reference list.
 	 * The list contents are of type {@link org.nasdanika.models.capability.AbstractCapability}.

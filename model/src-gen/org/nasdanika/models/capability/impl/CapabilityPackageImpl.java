@@ -32,7 +32,15 @@ import org.nasdanika.models.capability.ProvidedCapability;
 import org.nasdanika.models.capability.RequiredCapability;
 import org.nasdanika.models.capability.Version;
 
+import org.nasdanika.models.iam.IamPackage;
+
+import org.nasdanika.models.lifecycle.LifecyclePackage;
+
 import org.nasdanika.models.nxcore.NxcorePackage;
+
+import org.nasdanika.models.role.RolePackage;
+
+import org.nasdanika.models.seal.SealPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -208,7 +216,11 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 
 		// Initialize simple dependencies
 		NxcorePackage.eINSTANCE.eClass();
+		LifecyclePackage.eINSTANCE.eClass();
+		IamPackage.eINSTANCE.eClass();
+		SealPackage.eINSTANCE.eClass();
 		EcorePackage.eINSTANCE.eClass();
+		RolePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theCapabilityPackage.createPackageContents();
@@ -250,7 +262,7 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 	 * @generated
 	 */
 	@Override
-	public EReference getCapability_Addresses() {
+	public EReference getCapability_Dependencies() {
 		return (EReference)capabilityEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -260,38 +272,8 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 	 * @generated
 	 */
 	@Override
-	public EReference getCapability_AllAddresses() {
-		return (EReference)capabilityEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getCapability_Dependencies() {
-		return (EReference)capabilityEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getCapability_Dependents() {
-		return (EReference)capabilityEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCapability_Lifecycle() {
-		return (EAttribute)capabilityEClass.getEStructuralFeatures().get(4);
+		return (EReference)capabilityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -432,16 +414,6 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 	@Override
 	public EReference getCapabilityProvider_Requires() {
 		return (EReference)capabilityProviderEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCapabilityProvider_Lifecycle() {
-		return (EAttribute)capabilityProviderEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -616,11 +588,8 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 		abstractCapabilityEClass = createEClass(ABSTRACT_CAPABILITY);
 
 		capabilityEClass = createEClass(CAPABILITY);
-		createEReference(capabilityEClass, CAPABILITY__ADDRESSES);
-		createEReference(capabilityEClass, CAPABILITY__ALL_ADDRESSES);
 		createEReference(capabilityEClass, CAPABILITY__DEPENDENCIES);
 		createEReference(capabilityEClass, CAPABILITY__DEPENDENTS);
-		createEAttribute(capabilityEClass, CAPABILITY__LIFECYCLE);
 
 		compositeCapabilityEClass = createEClass(COMPOSITE_CAPABILITY);
 
@@ -641,7 +610,6 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 		capabilityProviderEClass = createEClass(CAPABILITY_PROVIDER);
 		createEReference(capabilityProviderEClass, CAPABILITY_PROVIDER__PROVIDES);
 		createEReference(capabilityProviderEClass, CAPABILITY_PROVIDER__REQUIRES);
-		createEAttribute(capabilityProviderEClass, CAPABILITY_PROVIDER__LIFECYCLE);
 
 		capabilityProviderDomainEClass = createEClass(CAPABILITY_PROVIDER_DOMAIN);
 		createEReference(capabilityProviderDomainEClass, CAPABILITY_PROVIDER_DOMAIN__CAPABILITY_PROVIDERS);
@@ -693,6 +661,7 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 
 		// Obtain other dependent packages
 		NxcorePackage theNxcorePackage = (NxcorePackage)EPackage.Registry.INSTANCE.getEPackage(NxcorePackage.eNS_URI);
+		LifecyclePackage theLifecyclePackage = (LifecyclePackage)EPackage.Registry.INSTANCE.getEPackage(LifecyclePackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -704,25 +673,27 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 		capabilityEClass.getESuperTypes().add(theNxcorePackage.getNamedPeriod());
 		capabilityEClass.getESuperTypes().add(this.getAbstractCapability());
 		capabilityEClass.getESuperTypes().add(this.getEvidenceDomain());
+		capabilityEClass.getESuperTypes().add(theLifecyclePackage.getStaged());
 		compositeCapabilityEClass.getESuperTypes().add(this.getCapability());
 		compositeCapabilityEClass.getESuperTypes().add(this.getCapabilityDomain());
 		capabilityReferenceEClass.getESuperTypes().add(theNxcorePackage.getModelElement());
 		capabilityReferenceEClass.getESuperTypes().add(this.getAbstractCapability());
-		capabilityDomainEClass.getESuperTypes().add(ecorePackage.getEObject());
+		capabilityDomainEClass.getESuperTypes().add(theNxcorePackage.getNamedElement());
 		capabilityDomainEClass.getESuperTypes().add(this.getAbstractCapability());
 		capabilityDependencyEClass.getESuperTypes().add(this.getCapabilityReference());
-		abstractCapabilityProviderEClass.getESuperTypes().add(ecorePackage.getEObject());
+		abstractCapabilityProviderEClass.getESuperTypes().add(theNxcorePackage.getStringIdentity());
 		capabilityProviderEClass.getESuperTypes().add(theNxcorePackage.getNamedPeriod());
 		capabilityProviderEClass.getESuperTypes().add(this.getAbstractCapabilityProvider());
-		capabilityProviderDomainEClass.getESuperTypes().add(ecorePackage.getEObject());
+		capabilityProviderEClass.getESuperTypes().add(theLifecyclePackage.getStaged());
+		capabilityProviderDomainEClass.getESuperTypes().add(theNxcorePackage.getNamedElement());
 		capabilityProviderDomainEClass.getESuperTypes().add(this.getAbstractCapabilityProvider());
 		capabilityProviderReferenceEClass.getESuperTypes().add(this.getAbstractCapabilityProvider());
 		providedCapabilityEClass.getESuperTypes().add(theNxcorePackage.getNamedPeriod());
 		providedCapabilityEClass.getESuperTypes().add(this.getEvidenceDomain());
-		abstractEvidenceEClass.getESuperTypes().add(ecorePackage.getEObject());
+		abstractEvidenceEClass.getESuperTypes().add(theNxcorePackage.getStringIdentity());
 		evidenceEClass.getESuperTypes().add(theNxcorePackage.getNamedPeriod());
 		evidenceEClass.getESuperTypes().add(this.getAbstractEvidence());
-		evidenceDomainEClass.getESuperTypes().add(ecorePackage.getEObject());
+		evidenceDomainEClass.getESuperTypes().add(theNxcorePackage.getNamedElement());
 		evidenceDomainEClass.getESuperTypes().add(this.getAbstractEvidence());
 		requiredCapabilityEClass.getESuperTypes().add(theNxcorePackage.getNamedPeriod());
 		versionEClass.getESuperTypes().add(theNxcorePackage.getNamedPeriod());
@@ -731,11 +702,8 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 		initEClass(abstractCapabilityEClass, AbstractCapability.class, "AbstractCapability", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(capabilityEClass, Capability.class, "Capability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCapability_Addresses(), ecorePackage.getEJavaObject(), null, "addresses", null, 0, -1, Capability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCapability_AllAddresses(), ecorePackage.getEJavaObject(), null, "allAddresses", null, 0, -1, Capability.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getCapability_Dependencies(), this.getAbstractCapability(), null, "dependencies", null, 0, -1, Capability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCapability_Dependents(), this.getCapabilityReference(), null, "dependents", null, 0, -1, Capability.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCapability_Lifecycle(), ecorePackage.getEJavaObject(), "lifecycle", null, 0, 1, Capability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(compositeCapabilityEClass, CompositeCapability.class, "CompositeCapability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -758,7 +726,6 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 		initEClass(capabilityProviderEClass, CapabilityProvider.class, "CapabilityProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCapabilityProvider_Provides(), this.getProvidedCapability(), null, "provides", null, 0, -1, CapabilityProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCapabilityProvider_Requires(), this.getRequiredCapability(), null, "requires", null, 0, -1, CapabilityProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCapabilityProvider_Lifecycle(), ecorePackage.getEJavaObject(), "lifecycle", null, 0, 1, CapabilityProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(capabilityProviderDomainEClass, CapabilityProviderDomain.class, "CapabilityProviderDomain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCapabilityProviderDomain_CapabilityProviders(), this.getAbstractCapabilityProvider(), null, "capabilityProviders", null, 0, -1, CapabilityProviderDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -821,13 +788,6 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 			   "basePackage", "org.nasdanika.models"
 		   });
 		addAnnotation
-		  (getCapability_AllAddresses(),
-		   source,
-		   new String[] {
-			   "documentation", "*\nAddressed concerns from this capability plus addressedBy from concerns",
-			   "get", "throw new <%java.lang.Error%>(\"Unresolved compilation problems: AbstractConcern cannot be resolved to a type.\");"
-		   });
-		addAnnotation
 		  (getCapability_Dependencies(),
 		   source,
 		   new String[] {
@@ -838,7 +798,7 @@ public class CapabilityPackageImpl extends EPackageImpl implements CapabilityPac
 		   source,
 		   new String[] {
 			   "documentation", "*\nCapabilities depending on this capability, excludes containment.\nReturns capability references, including capability dependencies, with target pointing\nto this capability and contained by the dependencies reference.",
-			   "get", "throw new <%java.lang.Error%>(\"Unresolved compilation problems: The method or field ProductmanagementPackage is undefined\");"
+			   "get", "<%org.eclipse.emf.common.util.BasicEList%><<%org.nasdanika.models.capability.CapabilityReference%>> _xblockexpression = null;\n{\n\tfinal <%org.eclipse.emf.common.util.BasicEList%><<%org.nasdanika.models.capability.CapabilityReference%>> result = new <%org.eclipse.emf.common.util.BasicEList%><<%org.nasdanika.models.capability.CapabilityReference%>>();\n\t<%org.eclipse.emf.common.util.EList%><<%org.eclipse.emf.ecore.EObject%>> _referrers = this.getReferrers(<%org.nasdanika.models.capability.CapabilityPackage.Literals%>.CAPABILITY_REFERENCE__TARGET);\n\tfor (final <%org.eclipse.emf.ecore.EObject%> referrer : _referrers)\n\t{\n\t\t<%org.eclipse.emf.ecore.EReference%> _eContainmentFeature = referrer.eContainmentFeature();\n\t\tboolean _tripleEquals = (_eContainmentFeature == <%org.nasdanika.models.capability.CapabilityPackage.Literals%>.CAPABILITY__DEPENDENCIES);\n\t\tif (_tripleEquals)\n\t\t{\n\t\t\tif ((referrer instanceof <%org.nasdanika.models.capability.CapabilityReference%>))\n\t\t\t{\n\t\t\t\tresult.add(((<%org.nasdanika.models.capability.CapabilityReference%>)referrer));\n\t\t\t}\n\t\t}\n\t}\n\t_xblockexpression = result;\n}\nreturn _xblockexpression;"
 		   });
 		addAnnotation
 		  (capabilityReferenceEClass,

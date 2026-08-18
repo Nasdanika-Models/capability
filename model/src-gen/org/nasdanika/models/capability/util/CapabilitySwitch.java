@@ -9,6 +9,10 @@ import org.eclipse.emf.ecore.util.Switch;
 
 import org.nasdanika.models.capability.*;
 
+import org.nasdanika.models.iam.AccessControlled;
+
+import org.nasdanika.models.lifecycle.Staged;
+
 import org.nasdanika.models.nxcore.Documented;
 import org.nasdanika.models.nxcore.Marked;
 import org.nasdanika.models.nxcore.ModelElement;
@@ -17,6 +21,8 @@ import org.nasdanika.models.nxcore.NamedPeriod;
 import org.nasdanika.models.nxcore.Period;
 import org.nasdanika.models.nxcore.Referrable;
 import org.nasdanika.models.nxcore.StringIdentity;
+
+import org.nasdanika.models.seal.SealedElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -92,10 +98,13 @@ public class CapabilitySwitch<T> extends Switch<T> {
 				if (result == null) result = caseNamedPeriod(capability);
 				if (result == null) result = caseAbstractCapability(capability);
 				if (result == null) result = caseEvidenceDomain(capability);
+				if (result == null) result = caseStaged(capability);
 				if (result == null) result = caseNamedElement(capability);
 				if (result == null) result = casePeriod(capability);
 				if (result == null) result = caseAbstractEvidence(capability);
+				if (result == null) result = caseSealedElement(capability);
 				if (result == null) result = caseModelElement(capability);
+				if (result == null) result = caseAccessControlled(capability);
 				if (result == null) result = caseStringIdentity(capability);
 				if (result == null) result = caseDocumented(capability);
 				if (result == null) result = caseMarked(capability);
@@ -111,10 +120,13 @@ public class CapabilitySwitch<T> extends Switch<T> {
 				if (result == null) result = caseNamedPeriod(compositeCapability);
 				if (result == null) result = caseAbstractCapability(compositeCapability);
 				if (result == null) result = caseEvidenceDomain(compositeCapability);
+				if (result == null) result = caseStaged(compositeCapability);
 				if (result == null) result = caseNamedElement(compositeCapability);
 				if (result == null) result = casePeriod(compositeCapability);
 				if (result == null) result = caseAbstractEvidence(compositeCapability);
+				if (result == null) result = caseSealedElement(compositeCapability);
 				if (result == null) result = caseModelElement(compositeCapability);
+				if (result == null) result = caseAccessControlled(compositeCapability);
 				if (result == null) result = caseStringIdentity(compositeCapability);
 				if (result == null) result = caseDocumented(compositeCapability);
 				if (result == null) result = caseMarked(compositeCapability);
@@ -137,6 +149,7 @@ public class CapabilitySwitch<T> extends Switch<T> {
 			case CapabilityPackage.CAPABILITY_DOMAIN: {
 				CapabilityDomain capabilityDomain = (CapabilityDomain)theEObject;
 				T result = caseCapabilityDomain(capabilityDomain);
+				if (result == null) result = caseNamedElement(capabilityDomain);
 				if (result == null) result = caseAbstractCapability(capabilityDomain);
 				if (result == null) result = caseModelElement(capabilityDomain);
 				if (result == null) result = caseStringIdentity(capabilityDomain);
@@ -162,6 +175,8 @@ public class CapabilitySwitch<T> extends Switch<T> {
 			case CapabilityPackage.ABSTRACT_CAPABILITY_PROVIDER: {
 				AbstractCapabilityProvider abstractCapabilityProvider = (AbstractCapabilityProvider)theEObject;
 				T result = caseAbstractCapabilityProvider(abstractCapabilityProvider);
+				if (result == null) result = caseStringIdentity(abstractCapabilityProvider);
+				if (result == null) result = caseReferrable(abstractCapabilityProvider);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -170,9 +185,12 @@ public class CapabilitySwitch<T> extends Switch<T> {
 				T result = caseCapabilityProvider(capabilityProvider);
 				if (result == null) result = caseNamedPeriod(capabilityProvider);
 				if (result == null) result = caseAbstractCapabilityProvider(capabilityProvider);
+				if (result == null) result = caseStaged(capabilityProvider);
 				if (result == null) result = caseNamedElement(capabilityProvider);
 				if (result == null) result = casePeriod(capabilityProvider);
+				if (result == null) result = caseSealedElement(capabilityProvider);
 				if (result == null) result = caseModelElement(capabilityProvider);
+				if (result == null) result = caseAccessControlled(capabilityProvider);
 				if (result == null) result = caseStringIdentity(capabilityProvider);
 				if (result == null) result = caseDocumented(capabilityProvider);
 				if (result == null) result = caseMarked(capabilityProvider);
@@ -183,7 +201,13 @@ public class CapabilitySwitch<T> extends Switch<T> {
 			case CapabilityPackage.CAPABILITY_PROVIDER_DOMAIN: {
 				CapabilityProviderDomain capabilityProviderDomain = (CapabilityProviderDomain)theEObject;
 				T result = caseCapabilityProviderDomain(capabilityProviderDomain);
+				if (result == null) result = caseNamedElement(capabilityProviderDomain);
 				if (result == null) result = caseAbstractCapabilityProvider(capabilityProviderDomain);
+				if (result == null) result = caseModelElement(capabilityProviderDomain);
+				if (result == null) result = caseStringIdentity(capabilityProviderDomain);
+				if (result == null) result = caseDocumented(capabilityProviderDomain);
+				if (result == null) result = caseMarked(capabilityProviderDomain);
+				if (result == null) result = caseReferrable(capabilityProviderDomain);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -191,6 +215,8 @@ public class CapabilitySwitch<T> extends Switch<T> {
 				CapabilityProviderReference capabilityProviderReference = (CapabilityProviderReference)theEObject;
 				T result = caseCapabilityProviderReference(capabilityProviderReference);
 				if (result == null) result = caseAbstractCapabilityProvider(capabilityProviderReference);
+				if (result == null) result = caseStringIdentity(capabilityProviderReference);
+				if (result == null) result = caseReferrable(capabilityProviderReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -213,6 +239,8 @@ public class CapabilitySwitch<T> extends Switch<T> {
 			case CapabilityPackage.ABSTRACT_EVIDENCE: {
 				AbstractEvidence abstractEvidence = (AbstractEvidence)theEObject;
 				T result = caseAbstractEvidence(abstractEvidence);
+				if (result == null) result = caseStringIdentity(abstractEvidence);
+				if (result == null) result = caseReferrable(abstractEvidence);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -234,7 +262,13 @@ public class CapabilitySwitch<T> extends Switch<T> {
 			case CapabilityPackage.EVIDENCE_DOMAIN: {
 				EvidenceDomain evidenceDomain = (EvidenceDomain)theEObject;
 				T result = caseEvidenceDomain(evidenceDomain);
+				if (result == null) result = caseNamedElement(evidenceDomain);
 				if (result == null) result = caseAbstractEvidence(evidenceDomain);
+				if (result == null) result = caseModelElement(evidenceDomain);
+				if (result == null) result = caseStringIdentity(evidenceDomain);
+				if (result == null) result = caseDocumented(evidenceDomain);
+				if (result == null) result = caseMarked(evidenceDomain);
+				if (result == null) result = caseReferrable(evidenceDomain);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -627,6 +661,51 @@ public class CapabilitySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseNamedPeriod(NamedPeriod object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Access Controlled</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Access Controlled</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAccessControlled(AccessControlled object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Sealed Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Sealed Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSealedElement(SealedElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Staged</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Staged</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStaged(Staged object) {
 		return null;
 	}
 

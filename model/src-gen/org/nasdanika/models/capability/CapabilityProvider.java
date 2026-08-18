@@ -4,6 +4,8 @@ package org.nasdanika.models.capability;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.nasdanika.models.lifecycle.Staged;
+
 import org.nasdanika.models.nxcore.NamedPeriod;
 
 /**
@@ -17,14 +19,13 @@ import org.nasdanika.models.nxcore.NamedPeriod;
  * <ul>
  *   <li>{@link org.nasdanika.models.capability.CapabilityProvider#getProvides <em>Provides</em>}</li>
  *   <li>{@link org.nasdanika.models.capability.CapabilityProvider#getRequires <em>Requires</em>}</li>
- *   <li>{@link org.nasdanika.models.capability.CapabilityProvider#getLifecycle <em>Lifecycle</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.models.capability.CapabilityPackage#getCapabilityProvider()
  * @model
  * @generated
  */
-public interface CapabilityProvider extends NamedPeriod, AbstractCapabilityProvider {
+public interface CapabilityProvider extends NamedPeriod, AbstractCapabilityProvider, Staged {
 	/**
 	 * Returns the value of the '<em><b>Provides</b></em>' containment reference list.
 	 * The list contents are of type {@link org.nasdanika.models.capability.ProvidedCapability}.
@@ -48,27 +49,5 @@ public interface CapabilityProvider extends NamedPeriod, AbstractCapabilityProvi
 	 * @generated
 	 */
 	EList<RequiredCapability> getRequires();
-
-	/**
-	 * Returns the value of the '<em><b>Lifecycle</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lifecycle</em>' attribute.
-	 * @see #setLifecycle(Object)
-	 * @see org.nasdanika.models.capability.CapabilityPackage#getCapabilityProvider_Lifecycle()
-	 * @model unique="false"
-	 * @generated
-	 */
-	Object getLifecycle();
-
-	/**
-	 * Sets the value of the '{@link org.nasdanika.models.capability.CapabilityProvider#getLifecycle <em>Lifecycle</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Lifecycle</em>' attribute.
-	 * @see #getLifecycle()
-	 * @generated
-	 */
-	void setLifecycle(Object value);
 
 } // CapabilityProvider

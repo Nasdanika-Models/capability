@@ -11,13 +11,13 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.nasdanika.models.capability.AbstractCapabilityProvider;
 import org.nasdanika.models.capability.CapabilityPackage;
 import org.nasdanika.models.capability.CapabilityProviderDomain;
+
+import org.nasdanika.models.nxcore.impl.NamedElementImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ import org.nasdanika.models.capability.CapabilityProviderDomain;
  *
  * @generated
  */
-public class CapabilityProviderDomainImpl extends EObjectImpl implements CapabilityProviderDomain {
+public class CapabilityProviderDomainImpl extends NamedElementImpl implements CapabilityProviderDomain {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -50,16 +50,6 @@ public class CapabilityProviderDomainImpl extends EObjectImpl implements Capabil
 	@Override
 	protected EClass eStaticClass() {
 		return CapabilityPackage.Literals.CAPABILITY_PROVIDER_DOMAIN;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**

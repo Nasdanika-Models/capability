@@ -2,7 +2,7 @@
  */
 package org.nasdanika.models.capability;
 
-import org.eclipse.emf.ecore.EObject;
+import org.nasdanika.models.nxcore.StringIdentity;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,8 +11,8 @@ import org.eclipse.emf.ecore.EObject;
  *
  *
  * @see org.nasdanika.models.capability.CapabilityPackage#getAbstractEvidence()
- * @model interface="true" abstract="true" superTypes="org.eclipse.emf.ecore.EJavaObject"
+ * @model interface="true" abstract="true"
  * @generated
  */
-public interface AbstractEvidence extends EObject {
+public interface AbstractEvidence extends StringIdentity {
 } // AbstractEvidence

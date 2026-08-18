@@ -2,13 +2,30 @@
  */
 package org.nasdanika.models.capability.impl;
 
-import org.eclipse.emf.ecore.EClass;
+import java.lang.reflect.InvocationTargetException;
 
-import org.eclipse.emf.ecore.impl.EObjectImpl;
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notifier;
+
+import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 
 import org.nasdanika.models.capability.CapabilityPackage;
 import org.nasdanika.models.capability.CapabilityProvider;
 import org.nasdanika.models.capability.CapabilityProviderReference;
+
+import org.nasdanika.models.nxcore.NxcorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,12 +35,23 @@ import org.nasdanika.models.capability.CapabilityProviderReference;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.nasdanika.models.capability.impl.CapabilityProviderReferenceImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.nasdanika.models.capability.impl.CapabilityProviderReferenceImpl#getTarget <em>Target</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class CapabilityProviderReferenceImpl extends EObjectImpl implements CapabilityProviderReference {
+public class CapabilityProviderReferenceImpl extends MinimalEObjectImpl.Container implements CapabilityProviderReference {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -51,6 +79,26 @@ public class CapabilityProviderReferenceImpl extends EObjectImpl implements Capa
 	@Override
 	protected int eStaticFeatureCount() {
 		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getId() {
+		return (String)eDynamicGet(CapabilityPackage.CAPABILITY_PROVIDER_REFERENCE__ID, NxcorePackage.Literals.STRING_IDENTITY__ID, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setId(String newId) {
+		eDynamicSet(CapabilityPackage.CAPABILITY_PROVIDER_REFERENCE__ID, NxcorePackage.Literals.STRING_IDENTITY__ID, newId);
 	}
 
 	/**
@@ -88,8 +136,75 @@ public class CapabilityProviderReferenceImpl extends EObjectImpl implements Capa
 	 * @generated
 	 */
 	@Override
+	public void collect(final Object source, final EReference eReference, final EList<EObject> accumulator) {
+		boolean _isInstance = eReference.getEContainingClass().isInstance(source);
+		if (_isInstance) {
+			final Object value = ((EObject) source).eGet(eReference);
+			boolean _isMany = eReference.isMany();
+			if (_isMany) {
+				boolean _contains = ((Collection<?>) value).contains(this);
+				if (_contains) {
+					accumulator.add(((EObject) source));
+				}
+			}
+			else {
+				if ((value == this)) {
+					accumulator.add(((EObject) source));
+				}
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<EObject> getReferrers(final EReference eReference) {
+		final BasicEList<EObject> ret = new BasicEList<EObject>();
+		final Resource res = this.eResource();
+		TreeIterator<?> cit = null;
+		if ((res == null)) {
+			EObject root = this;
+			EObject rc = null;
+			while (((rc = root.eContainer()) != null)) {
+				root = rc;
+			}
+			if ((root != null)) {
+				this.collect(root, eReference, ret);
+				cit = root.eAllContents();
+			}
+		}
+		else {
+			final ResourceSet rSet = res.getResourceSet();
+			TreeIterator<? extends Notifier> _xifexpression = null;
+			if ((rSet == null)) {
+				_xifexpression = res.getAllContents();
+			}
+			else {
+				_xifexpression = rSet.getAllContents();
+			}
+			cit = _xifexpression;
+		}
+		if ((cit != null)) {
+			while (cit.hasNext()) {
+				this.collect(cit.next(), eReference, ret);
+			}
+		}
+		return ret;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case CapabilityPackage.CAPABILITY_PROVIDER_REFERENCE__ID:
+				return getId();
 			case CapabilityPackage.CAPABILITY_PROVIDER_REFERENCE__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
@@ -105,6 +220,9 @@ public class CapabilityProviderReferenceImpl extends EObjectImpl implements Capa
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case CapabilityPackage.CAPABILITY_PROVIDER_REFERENCE__ID:
+				setId((String)newValue);
+				return;
 			case CapabilityPackage.CAPABILITY_PROVIDER_REFERENCE__TARGET:
 				setTarget((CapabilityProvider)newValue);
 				return;
@@ -120,6 +238,9 @@ public class CapabilityProviderReferenceImpl extends EObjectImpl implements Capa
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case CapabilityPackage.CAPABILITY_PROVIDER_REFERENCE__ID:
+				setId(ID_EDEFAULT);
+				return;
 			case CapabilityPackage.CAPABILITY_PROVIDER_REFERENCE__TARGET:
 				setTarget((CapabilityProvider)null);
 				return;
@@ -135,10 +256,30 @@ public class CapabilityProviderReferenceImpl extends EObjectImpl implements Capa
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case CapabilityPackage.CAPABILITY_PROVIDER_REFERENCE__ID:
+				return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
 			case CapabilityPackage.CAPABILITY_PROVIDER_REFERENCE__TARGET:
 				return basicGetTarget() != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	@SuppressWarnings("unchecked")
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case CapabilityPackage.CAPABILITY_PROVIDER_REFERENCE___COLLECT__OBJECT_EREFERENCE_ELIST:
+				collect(arguments.get(0), (EReference)arguments.get(1), (EList<EObject>)arguments.get(2));
+				return null;
+			case CapabilityPackage.CAPABILITY_PROVIDER_REFERENCE___GET_REFERRERS__EREFERENCE:
+				return getReferrers((EReference)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //CapabilityProviderReferenceImpl

@@ -8,7 +8,6 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EcorePackage;
 
 import org.nasdanika.models.nxcore.NxcorePackage;
 
@@ -327,22 +326,67 @@ public interface CapabilityPackage extends EPackage {
 	int CAPABILITY__EVIDENCE = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Addresses</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Access Control</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY__ADDRESSES = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 1;
+	int CAPABILITY__ACCESS_CONTROL = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>All Addresses</b></em>' reference list.
+	 * The feature id for the '<em><b>Encrypted Features</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY__ALL_ADDRESSES = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 2;
+	int CAPABILITY__ENCRYPTED_FEATURES = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Variant Features</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY__VARIANT_FEATURES = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Signatures</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY__SIGNATURES = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Lifecycles</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY__LIFECYCLES = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Sojourns</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY__SOJOURNS = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Current</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY__CURRENT = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Dependencies</b></em>' containment reference list.
@@ -351,7 +395,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY__DEPENDENCIES = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 3;
+	int CAPABILITY__DEPENDENCIES = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Dependents</b></em>' reference list.
@@ -360,16 +404,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY__DEPENDENTS = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Lifecycle</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY__LIFECYCLE = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 5;
+	int CAPABILITY__DEPENDENTS = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>Capability</em>' class.
@@ -378,7 +413,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_FEATURE_COUNT = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 6;
+	int CAPABILITY_FEATURE_COUNT = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 10;
 
 	/**
 	 * The operation id for the '<em>Collect</em>' operation.
@@ -399,148 +434,13 @@ public interface CapabilityPackage extends EPackage {
 	int CAPABILITY___GET_REFERRERS__EREFERENCE = NxcorePackage.NAMED_PERIOD___GET_REFERRERS__EREFERENCE;
 
 	/**
-	 * The operation id for the '<em>EClass</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY___ECLASS = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>EIs Proxy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY___EIS_PROXY = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>EResource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY___ERESOURCE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>EContainer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY___ECONTAINER = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>EContaining Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY___ECONTAINING_FEATURE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 4;
-
-	/**
-	 * The operation id for the '<em>EContainment Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY___ECONTAINMENT_FEATURE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 5;
-
-	/**
-	 * The operation id for the '<em>EContents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY___ECONTENTS = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 6;
-
-	/**
-	 * The operation id for the '<em>EAll Contents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY___EALL_CONTENTS = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 7;
-
-	/**
-	 * The operation id for the '<em>ECross References</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY___ECROSS_REFERENCES = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 8;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY___EGET__ESTRUCTURALFEATURE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 9;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY___EGET__ESTRUCTURALFEATURE_BOOLEAN = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 10;
-
-	/**
-	 * The operation id for the '<em>ESet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY___ESET__ESTRUCTURALFEATURE_OBJECT = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 11;
-
-	/**
-	 * The operation id for the '<em>EIs Set</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY___EIS_SET__ESTRUCTURALFEATURE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 12;
-
-	/**
-	 * The operation id for the '<em>EUnset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY___EUNSET__ESTRUCTURALFEATURE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 13;
-
-	/**
-	 * The operation id for the '<em>EInvoke</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY___EINVOKE__EOPERATION_ELIST = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 14;
-
-	/**
 	 * The number of operations of the '<em>Capability</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_OPERATION_COUNT = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 15;
+	int CAPABILITY_OPERATION_COUNT = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.capability.impl.CompositeCapabilityImpl <em>Composite Capability</em>}' class.
@@ -679,22 +579,67 @@ public interface CapabilityPackage extends EPackage {
 	int COMPOSITE_CAPABILITY__EVIDENCE = CAPABILITY__EVIDENCE;
 
 	/**
-	 * The feature id for the '<em><b>Addresses</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Access Control</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_CAPABILITY__ADDRESSES = CAPABILITY__ADDRESSES;
+	int COMPOSITE_CAPABILITY__ACCESS_CONTROL = CAPABILITY__ACCESS_CONTROL;
 
 	/**
-	 * The feature id for the '<em><b>All Addresses</b></em>' reference list.
+	 * The feature id for the '<em><b>Encrypted Features</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_CAPABILITY__ALL_ADDRESSES = CAPABILITY__ALL_ADDRESSES;
+	int COMPOSITE_CAPABILITY__ENCRYPTED_FEATURES = CAPABILITY__ENCRYPTED_FEATURES;
+
+	/**
+	 * The feature id for the '<em><b>Variant Features</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_CAPABILITY__VARIANT_FEATURES = CAPABILITY__VARIANT_FEATURES;
+
+	/**
+	 * The feature id for the '<em><b>Signatures</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_CAPABILITY__SIGNATURES = CAPABILITY__SIGNATURES;
+
+	/**
+	 * The feature id for the '<em><b>Lifecycles</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_CAPABILITY__LIFECYCLES = CAPABILITY__LIFECYCLES;
+
+	/**
+	 * The feature id for the '<em><b>Sojourns</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_CAPABILITY__SOJOURNS = CAPABILITY__SOJOURNS;
+
+	/**
+	 * The feature id for the '<em><b>Current</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_CAPABILITY__CURRENT = CAPABILITY__CURRENT;
 
 	/**
 	 * The feature id for the '<em><b>Dependencies</b></em>' containment reference list.
@@ -713,15 +658,6 @@ public interface CapabilityPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPOSITE_CAPABILITY__DEPENDENTS = CAPABILITY__DEPENDENTS;
-
-	/**
-	 * The feature id for the '<em><b>Lifecycle</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_CAPABILITY__LIFECYCLE = CAPABILITY__LIFECYCLE;
 
 	/**
 	 * The feature id for the '<em><b>Capabilities</b></em>' containment reference list.
@@ -767,141 +703,6 @@ public interface CapabilityPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPOSITE_CAPABILITY___GET_REFERRERS__EREFERENCE = CAPABILITY___GET_REFERRERS__EREFERENCE;
-
-	/**
-	 * The operation id for the '<em>EClass</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_CAPABILITY___ECLASS = CAPABILITY___ECLASS;
-
-	/**
-	 * The operation id for the '<em>EIs Proxy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_CAPABILITY___EIS_PROXY = CAPABILITY___EIS_PROXY;
-
-	/**
-	 * The operation id for the '<em>EResource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_CAPABILITY___ERESOURCE = CAPABILITY___ERESOURCE;
-
-	/**
-	 * The operation id for the '<em>EContainer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_CAPABILITY___ECONTAINER = CAPABILITY___ECONTAINER;
-
-	/**
-	 * The operation id for the '<em>EContaining Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_CAPABILITY___ECONTAINING_FEATURE = CAPABILITY___ECONTAINING_FEATURE;
-
-	/**
-	 * The operation id for the '<em>EContainment Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_CAPABILITY___ECONTAINMENT_FEATURE = CAPABILITY___ECONTAINMENT_FEATURE;
-
-	/**
-	 * The operation id for the '<em>EContents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_CAPABILITY___ECONTENTS = CAPABILITY___ECONTENTS;
-
-	/**
-	 * The operation id for the '<em>EAll Contents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_CAPABILITY___EALL_CONTENTS = CAPABILITY___EALL_CONTENTS;
-
-	/**
-	 * The operation id for the '<em>ECross References</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_CAPABILITY___ECROSS_REFERENCES = CAPABILITY___ECROSS_REFERENCES;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_CAPABILITY___EGET__ESTRUCTURALFEATURE = CAPABILITY___EGET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_CAPABILITY___EGET__ESTRUCTURALFEATURE_BOOLEAN = CAPABILITY___EGET__ESTRUCTURALFEATURE_BOOLEAN;
-
-	/**
-	 * The operation id for the '<em>ESet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_CAPABILITY___ESET__ESTRUCTURALFEATURE_OBJECT = CAPABILITY___ESET__ESTRUCTURALFEATURE_OBJECT;
-
-	/**
-	 * The operation id for the '<em>EIs Set</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_CAPABILITY___EIS_SET__ESTRUCTURALFEATURE = CAPABILITY___EIS_SET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EUnset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_CAPABILITY___EUNSET__ESTRUCTURALFEATURE = CAPABILITY___EUNSET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EInvoke</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_CAPABILITY___EINVOKE__EOPERATION_ELIST = CAPABILITY___EINVOKE__EOPERATION_ELIST;
 
 	/**
 	 * The operation id for the '<em>Resolve Capability Reference</em>' operation.
@@ -1074,7 +875,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN__ID = EcorePackage.EOBJECT_FEATURE_COUNT + 0;
+	int CAPABILITY_DOMAIN__ID = NxcorePackage.NAMED_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1083,7 +884,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN__DOCUMENTATION = EcorePackage.EOBJECT_FEATURE_COUNT + 1;
+	int CAPABILITY_DOMAIN__DOCUMENTATION = NxcorePackage.NAMED_ELEMENT__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Doc Ref</b></em>' attribute.
@@ -1092,7 +893,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN__DOC_REF = EcorePackage.EOBJECT_FEATURE_COUNT + 2;
+	int CAPABILITY_DOMAIN__DOC_REF = NxcorePackage.NAMED_ELEMENT__DOC_REF;
 
 	/**
 	 * The feature id for the '<em><b>Doc Format</b></em>' attribute.
@@ -1101,7 +902,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN__DOC_FORMAT = EcorePackage.EOBJECT_FEATURE_COUNT + 3;
+	int CAPABILITY_DOMAIN__DOC_FORMAT = NxcorePackage.NAMED_ELEMENT__DOC_FORMAT;
 
 	/**
 	 * The feature id for the '<em><b>Doc Contents</b></em>' containment reference list.
@@ -1110,7 +911,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN__DOC_CONTENTS = EcorePackage.EOBJECT_FEATURE_COUNT + 4;
+	int CAPABILITY_DOMAIN__DOC_CONTENTS = NxcorePackage.NAMED_ELEMENT__DOC_CONTENTS;
 
 	/**
 	 * The feature id for the '<em><b>Doc Sections</b></em>' containment reference list.
@@ -1119,7 +920,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN__DOC_SECTIONS = EcorePackage.EOBJECT_FEATURE_COUNT + 5;
+	int CAPABILITY_DOMAIN__DOC_SECTIONS = NxcorePackage.NAMED_ELEMENT__DOC_SECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -1128,7 +929,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN__MARKERS = EcorePackage.EOBJECT_FEATURE_COUNT + 6;
+	int CAPABILITY_DOMAIN__MARKERS = NxcorePackage.NAMED_ELEMENT__MARKERS;
 
 	/**
 	 * The feature id for the '<em><b>Icon</b></em>' attribute.
@@ -1137,7 +938,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN__ICON = EcorePackage.EOBJECT_FEATURE_COUNT + 7;
+	int CAPABILITY_DOMAIN__ICON = NxcorePackage.NAMED_ELEMENT__ICON;
 
 	/**
 	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
@@ -1146,7 +947,16 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN__URIS = EcorePackage.EOBJECT_FEATURE_COUNT + 8;
+	int CAPABILITY_DOMAIN__URIS = NxcorePackage.NAMED_ELEMENT__URIS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_DOMAIN__NAME = NxcorePackage.NAMED_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Capabilities</b></em>' containment reference list.
@@ -1155,7 +965,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN__CAPABILITIES = EcorePackage.EOBJECT_FEATURE_COUNT + 9;
+	int CAPABILITY_DOMAIN__CAPABILITIES = NxcorePackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Resolved Capabilities</b></em>' reference list.
@@ -1164,7 +974,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN__RESOLVED_CAPABILITIES = EcorePackage.EOBJECT_FEATURE_COUNT + 10;
+	int CAPABILITY_DOMAIN__RESOLVED_CAPABILITIES = NxcorePackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Domain</em>' class.
@@ -1173,142 +983,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN_FEATURE_COUNT = EcorePackage.EOBJECT_FEATURE_COUNT + 11;
-
-	/**
-	 * The operation id for the '<em>EClass</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_DOMAIN___ECLASS = EcorePackage.EOBJECT___ECLASS;
-
-	/**
-	 * The operation id for the '<em>EIs Proxy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_DOMAIN___EIS_PROXY = EcorePackage.EOBJECT___EIS_PROXY;
-
-	/**
-	 * The operation id for the '<em>EResource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_DOMAIN___ERESOURCE = EcorePackage.EOBJECT___ERESOURCE;
-
-	/**
-	 * The operation id for the '<em>EContainer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_DOMAIN___ECONTAINER = EcorePackage.EOBJECT___ECONTAINER;
-
-	/**
-	 * The operation id for the '<em>EContaining Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_DOMAIN___ECONTAINING_FEATURE = EcorePackage.EOBJECT___ECONTAINING_FEATURE;
-
-	/**
-	 * The operation id for the '<em>EContainment Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_DOMAIN___ECONTAINMENT_FEATURE = EcorePackage.EOBJECT___ECONTAINMENT_FEATURE;
-
-	/**
-	 * The operation id for the '<em>EContents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_DOMAIN___ECONTENTS = EcorePackage.EOBJECT___ECONTENTS;
-
-	/**
-	 * The operation id for the '<em>EAll Contents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_DOMAIN___EALL_CONTENTS = EcorePackage.EOBJECT___EALL_CONTENTS;
-
-	/**
-	 * The operation id for the '<em>ECross References</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_DOMAIN___ECROSS_REFERENCES = EcorePackage.EOBJECT___ECROSS_REFERENCES;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_DOMAIN___EGET__ESTRUCTURALFEATURE = EcorePackage.EOBJECT___EGET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_DOMAIN___EGET__ESTRUCTURALFEATURE_BOOLEAN = EcorePackage.EOBJECT___EGET__ESTRUCTURALFEATURE_BOOLEAN;
-
-	/**
-	 * The operation id for the '<em>ESet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_DOMAIN___ESET__ESTRUCTURALFEATURE_OBJECT = EcorePackage.EOBJECT___ESET__ESTRUCTURALFEATURE_OBJECT;
-
-	/**
-	 * The operation id for the '<em>EIs Set</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_DOMAIN___EIS_SET__ESTRUCTURALFEATURE = EcorePackage.EOBJECT___EIS_SET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EUnset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_DOMAIN___EUNSET__ESTRUCTURALFEATURE = EcorePackage.EOBJECT___EUNSET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EInvoke</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_DOMAIN___EINVOKE__EOPERATION_ELIST = EcorePackage.EOBJECT___EINVOKE__EOPERATION_ELIST;
+	int CAPABILITY_DOMAIN_FEATURE_COUNT = NxcorePackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Collect</em>' operation.
@@ -1317,7 +992,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN___COLLECT__OBJECT_EREFERENCE_ELIST = EcorePackage.EOBJECT_OPERATION_COUNT + 0;
+	int CAPABILITY_DOMAIN___COLLECT__OBJECT_EREFERENCE_ELIST = NxcorePackage.NAMED_ELEMENT___COLLECT__OBJECT_EREFERENCE_ELIST;
 
 	/**
 	 * The operation id for the '<em>Get Referrers</em>' operation.
@@ -1326,7 +1001,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN___GET_REFERRERS__EREFERENCE = EcorePackage.EOBJECT_OPERATION_COUNT + 1;
+	int CAPABILITY_DOMAIN___GET_REFERRERS__EREFERENCE = NxcorePackage.NAMED_ELEMENT___GET_REFERRERS__EREFERENCE;
 
 	/**
 	 * The operation id for the '<em>Resolve Capability Reference</em>' operation.
@@ -1335,7 +1010,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN___RESOLVE_CAPABILITY_REFERENCE__ABSTRACTCAPABILITY = EcorePackage.EOBJECT_OPERATION_COUNT + 2;
+	int CAPABILITY_DOMAIN___RESOLVE_CAPABILITY_REFERENCE__ABSTRACTCAPABILITY = NxcorePackage.NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Domain</em>' class.
@@ -1344,7 +1019,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_DOMAIN_OPERATION_COUNT = EcorePackage.EOBJECT_OPERATION_COUNT + 3;
+	int CAPABILITY_DOMAIN_OPERATION_COUNT = NxcorePackage.NAMED_ELEMENT_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.capability.impl.CapabilityDependencyImpl <em>Dependency</em>}' class.
@@ -1511,148 +1186,40 @@ public interface CapabilityPackage extends EPackage {
 	int ABSTRACT_CAPABILITY_PROVIDER = 6;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CAPABILITY_PROVIDER__ID = NxcorePackage.STRING_IDENTITY__ID;
+
+	/**
 	 * The number of structural features of the '<em>Abstract Capability Provider</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CAPABILITY_PROVIDER_FEATURE_COUNT = EcorePackage.EOBJECT_FEATURE_COUNT + 0;
+	int ABSTRACT_CAPABILITY_PROVIDER_FEATURE_COUNT = NxcorePackage.STRING_IDENTITY_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>EClass</em>' operation.
+	 * The operation id for the '<em>Collect</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CAPABILITY_PROVIDER___ECLASS = EcorePackage.EOBJECT___ECLASS;
+	int ABSTRACT_CAPABILITY_PROVIDER___COLLECT__OBJECT_EREFERENCE_ELIST = NxcorePackage.STRING_IDENTITY___COLLECT__OBJECT_EREFERENCE_ELIST;
 
 	/**
-	 * The operation id for the '<em>EIs Proxy</em>' operation.
+	 * The operation id for the '<em>Get Referrers</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CAPABILITY_PROVIDER___EIS_PROXY = EcorePackage.EOBJECT___EIS_PROXY;
-
-	/**
-	 * The operation id for the '<em>EResource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_CAPABILITY_PROVIDER___ERESOURCE = EcorePackage.EOBJECT___ERESOURCE;
-
-	/**
-	 * The operation id for the '<em>EContainer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_CAPABILITY_PROVIDER___ECONTAINER = EcorePackage.EOBJECT___ECONTAINER;
-
-	/**
-	 * The operation id for the '<em>EContaining Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_CAPABILITY_PROVIDER___ECONTAINING_FEATURE = EcorePackage.EOBJECT___ECONTAINING_FEATURE;
-
-	/**
-	 * The operation id for the '<em>EContainment Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_CAPABILITY_PROVIDER___ECONTAINMENT_FEATURE = EcorePackage.EOBJECT___ECONTAINMENT_FEATURE;
-
-	/**
-	 * The operation id for the '<em>EContents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_CAPABILITY_PROVIDER___ECONTENTS = EcorePackage.EOBJECT___ECONTENTS;
-
-	/**
-	 * The operation id for the '<em>EAll Contents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_CAPABILITY_PROVIDER___EALL_CONTENTS = EcorePackage.EOBJECT___EALL_CONTENTS;
-
-	/**
-	 * The operation id for the '<em>ECross References</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_CAPABILITY_PROVIDER___ECROSS_REFERENCES = EcorePackage.EOBJECT___ECROSS_REFERENCES;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_CAPABILITY_PROVIDER___EGET__ESTRUCTURALFEATURE = EcorePackage.EOBJECT___EGET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_CAPABILITY_PROVIDER___EGET__ESTRUCTURALFEATURE_BOOLEAN = EcorePackage.EOBJECT___EGET__ESTRUCTURALFEATURE_BOOLEAN;
-
-	/**
-	 * The operation id for the '<em>ESet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_CAPABILITY_PROVIDER___ESET__ESTRUCTURALFEATURE_OBJECT = EcorePackage.EOBJECT___ESET__ESTRUCTURALFEATURE_OBJECT;
-
-	/**
-	 * The operation id for the '<em>EIs Set</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_CAPABILITY_PROVIDER___EIS_SET__ESTRUCTURALFEATURE = EcorePackage.EOBJECT___EIS_SET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EUnset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_CAPABILITY_PROVIDER___EUNSET__ESTRUCTURALFEATURE = EcorePackage.EOBJECT___EUNSET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EInvoke</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_CAPABILITY_PROVIDER___EINVOKE__EOPERATION_ELIST = EcorePackage.EOBJECT___EINVOKE__EOPERATION_ELIST;
+	int ABSTRACT_CAPABILITY_PROVIDER___GET_REFERRERS__EREFERENCE = NxcorePackage.STRING_IDENTITY___GET_REFERRERS__EREFERENCE;
 
 	/**
 	 * The number of operations of the '<em>Abstract Capability Provider</em>' class.
@@ -1661,7 +1228,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CAPABILITY_PROVIDER_OPERATION_COUNT = EcorePackage.EOBJECT_OPERATION_COUNT + 0;
+	int ABSTRACT_CAPABILITY_PROVIDER_OPERATION_COUNT = NxcorePackage.STRING_IDENTITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.capability.impl.CapabilityProviderImpl <em>Provider</em>}' class.
@@ -1791,13 +1358,76 @@ public interface CapabilityPackage extends EPackage {
 	int CAPABILITY_PROVIDER__END = NxcorePackage.NAMED_PERIOD__END;
 
 	/**
+	 * The feature id for the '<em><b>Access Control</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_PROVIDER__ACCESS_CONTROL = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Encrypted Features</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_PROVIDER__ENCRYPTED_FEATURES = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Variant Features</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_PROVIDER__VARIANT_FEATURES = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Signatures</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_PROVIDER__SIGNATURES = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Lifecycles</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_PROVIDER__LIFECYCLES = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Sojourns</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_PROVIDER__SOJOURNS = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Current</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_PROVIDER__CURRENT = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 6;
+
+	/**
 	 * The feature id for the '<em><b>Provides</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_PROVIDER__PROVIDES = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 0;
+	int CAPABILITY_PROVIDER__PROVIDES = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Requires</b></em>' containment reference list.
@@ -1806,16 +1436,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_PROVIDER__REQUIRES = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Lifecycle</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER__LIFECYCLE = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 2;
+	int CAPABILITY_PROVIDER__REQUIRES = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Provider</em>' class.
@@ -1824,7 +1445,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_PROVIDER_FEATURE_COUNT = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 3;
+	int CAPABILITY_PROVIDER_FEATURE_COUNT = NxcorePackage.NAMED_PERIOD_FEATURE_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Collect</em>' operation.
@@ -1845,148 +1466,13 @@ public interface CapabilityPackage extends EPackage {
 	int CAPABILITY_PROVIDER___GET_REFERRERS__EREFERENCE = NxcorePackage.NAMED_PERIOD___GET_REFERRERS__EREFERENCE;
 
 	/**
-	 * The operation id for the '<em>EClass</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER___ECLASS = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>EIs Proxy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER___EIS_PROXY = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>EResource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER___ERESOURCE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>EContainer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER___ECONTAINER = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>EContaining Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER___ECONTAINING_FEATURE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 4;
-
-	/**
-	 * The operation id for the '<em>EContainment Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER___ECONTAINMENT_FEATURE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 5;
-
-	/**
-	 * The operation id for the '<em>EContents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER___ECONTENTS = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 6;
-
-	/**
-	 * The operation id for the '<em>EAll Contents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER___EALL_CONTENTS = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 7;
-
-	/**
-	 * The operation id for the '<em>ECross References</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER___ECROSS_REFERENCES = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 8;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER___EGET__ESTRUCTURALFEATURE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 9;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER___EGET__ESTRUCTURALFEATURE_BOOLEAN = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 10;
-
-	/**
-	 * The operation id for the '<em>ESet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER___ESET__ESTRUCTURALFEATURE_OBJECT = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 11;
-
-	/**
-	 * The operation id for the '<em>EIs Set</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER___EIS_SET__ESTRUCTURALFEATURE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 12;
-
-	/**
-	 * The operation id for the '<em>EUnset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER___EUNSET__ESTRUCTURALFEATURE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 13;
-
-	/**
-	 * The operation id for the '<em>EInvoke</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER___EINVOKE__EOPERATION_ELIST = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 14;
-
-	/**
 	 * The number of operations of the '<em>Provider</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_PROVIDER_OPERATION_COUNT = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 15;
+	int CAPABILITY_PROVIDER_OPERATION_COUNT = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.capability.impl.CapabilityProviderDomainImpl <em>Provider Domain</em>}' class.
@@ -1999,13 +1485,103 @@ public interface CapabilityPackage extends EPackage {
 	int CAPABILITY_PROVIDER_DOMAIN = 8;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_PROVIDER_DOMAIN__ID = NxcorePackage.NAMED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_PROVIDER_DOMAIN__DOCUMENTATION = NxcorePackage.NAMED_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Doc Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_PROVIDER_DOMAIN__DOC_REF = NxcorePackage.NAMED_ELEMENT__DOC_REF;
+
+	/**
+	 * The feature id for the '<em><b>Doc Format</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_PROVIDER_DOMAIN__DOC_FORMAT = NxcorePackage.NAMED_ELEMENT__DOC_FORMAT;
+
+	/**
+	 * The feature id for the '<em><b>Doc Contents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_PROVIDER_DOMAIN__DOC_CONTENTS = NxcorePackage.NAMED_ELEMENT__DOC_CONTENTS;
+
+	/**
+	 * The feature id for the '<em><b>Doc Sections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_PROVIDER_DOMAIN__DOC_SECTIONS = NxcorePackage.NAMED_ELEMENT__DOC_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_PROVIDER_DOMAIN__MARKERS = NxcorePackage.NAMED_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_PROVIDER_DOMAIN__ICON = NxcorePackage.NAMED_ELEMENT__ICON;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_PROVIDER_DOMAIN__URIS = NxcorePackage.NAMED_ELEMENT__URIS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_PROVIDER_DOMAIN__NAME = NxcorePackage.NAMED_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Capability Providers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_PROVIDER_DOMAIN__CAPABILITY_PROVIDERS = EcorePackage.EOBJECT_FEATURE_COUNT + 0;
+	int CAPABILITY_PROVIDER_DOMAIN__CAPABILITY_PROVIDERS = NxcorePackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Provider Domain</em>' class.
@@ -2014,142 +1590,25 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_PROVIDER_DOMAIN_FEATURE_COUNT = EcorePackage.EOBJECT_FEATURE_COUNT + 1;
+	int CAPABILITY_PROVIDER_DOMAIN_FEATURE_COUNT = NxcorePackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>EClass</em>' operation.
+	 * The operation id for the '<em>Collect</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_PROVIDER_DOMAIN___ECLASS = EcorePackage.EOBJECT___ECLASS;
+	int CAPABILITY_PROVIDER_DOMAIN___COLLECT__OBJECT_EREFERENCE_ELIST = NxcorePackage.NAMED_ELEMENT___COLLECT__OBJECT_EREFERENCE_ELIST;
 
 	/**
-	 * The operation id for the '<em>EIs Proxy</em>' operation.
+	 * The operation id for the '<em>Get Referrers</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_PROVIDER_DOMAIN___EIS_PROXY = EcorePackage.EOBJECT___EIS_PROXY;
-
-	/**
-	 * The operation id for the '<em>EResource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_DOMAIN___ERESOURCE = EcorePackage.EOBJECT___ERESOURCE;
-
-	/**
-	 * The operation id for the '<em>EContainer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_DOMAIN___ECONTAINER = EcorePackage.EOBJECT___ECONTAINER;
-
-	/**
-	 * The operation id for the '<em>EContaining Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_DOMAIN___ECONTAINING_FEATURE = EcorePackage.EOBJECT___ECONTAINING_FEATURE;
-
-	/**
-	 * The operation id for the '<em>EContainment Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_DOMAIN___ECONTAINMENT_FEATURE = EcorePackage.EOBJECT___ECONTAINMENT_FEATURE;
-
-	/**
-	 * The operation id for the '<em>EContents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_DOMAIN___ECONTENTS = EcorePackage.EOBJECT___ECONTENTS;
-
-	/**
-	 * The operation id for the '<em>EAll Contents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_DOMAIN___EALL_CONTENTS = EcorePackage.EOBJECT___EALL_CONTENTS;
-
-	/**
-	 * The operation id for the '<em>ECross References</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_DOMAIN___ECROSS_REFERENCES = EcorePackage.EOBJECT___ECROSS_REFERENCES;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_DOMAIN___EGET__ESTRUCTURALFEATURE = EcorePackage.EOBJECT___EGET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_DOMAIN___EGET__ESTRUCTURALFEATURE_BOOLEAN = EcorePackage.EOBJECT___EGET__ESTRUCTURALFEATURE_BOOLEAN;
-
-	/**
-	 * The operation id for the '<em>ESet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_DOMAIN___ESET__ESTRUCTURALFEATURE_OBJECT = EcorePackage.EOBJECT___ESET__ESTRUCTURALFEATURE_OBJECT;
-
-	/**
-	 * The operation id for the '<em>EIs Set</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_DOMAIN___EIS_SET__ESTRUCTURALFEATURE = EcorePackage.EOBJECT___EIS_SET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EUnset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_DOMAIN___EUNSET__ESTRUCTURALFEATURE = EcorePackage.EOBJECT___EUNSET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EInvoke</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_DOMAIN___EINVOKE__EOPERATION_ELIST = EcorePackage.EOBJECT___EINVOKE__EOPERATION_ELIST;
+	int CAPABILITY_PROVIDER_DOMAIN___GET_REFERRERS__EREFERENCE = NxcorePackage.NAMED_ELEMENT___GET_REFERRERS__EREFERENCE;
 
 	/**
 	 * The number of operations of the '<em>Provider Domain</em>' class.
@@ -2158,7 +1617,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_PROVIDER_DOMAIN_OPERATION_COUNT = EcorePackage.EOBJECT_OPERATION_COUNT + 0;
+	int CAPABILITY_PROVIDER_DOMAIN_OPERATION_COUNT = NxcorePackage.NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.capability.impl.CapabilityProviderReferenceImpl <em>Provider Reference</em>}' class.
@@ -2169,6 +1628,15 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 */
 	int CAPABILITY_PROVIDER_REFERENCE = 9;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY_PROVIDER_REFERENCE__ID = ABSTRACT_CAPABILITY_PROVIDER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -2189,139 +1657,22 @@ public interface CapabilityPackage extends EPackage {
 	int CAPABILITY_PROVIDER_REFERENCE_FEATURE_COUNT = ABSTRACT_CAPABILITY_PROVIDER_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>EClass</em>' operation.
+	 * The operation id for the '<em>Collect</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_PROVIDER_REFERENCE___ECLASS = ABSTRACT_CAPABILITY_PROVIDER___ECLASS;
+	int CAPABILITY_PROVIDER_REFERENCE___COLLECT__OBJECT_EREFERENCE_ELIST = ABSTRACT_CAPABILITY_PROVIDER___COLLECT__OBJECT_EREFERENCE_ELIST;
 
 	/**
-	 * The operation id for the '<em>EIs Proxy</em>' operation.
+	 * The operation id for the '<em>Get Referrers</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_PROVIDER_REFERENCE___EIS_PROXY = ABSTRACT_CAPABILITY_PROVIDER___EIS_PROXY;
-
-	/**
-	 * The operation id for the '<em>EResource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_REFERENCE___ERESOURCE = ABSTRACT_CAPABILITY_PROVIDER___ERESOURCE;
-
-	/**
-	 * The operation id for the '<em>EContainer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_REFERENCE___ECONTAINER = ABSTRACT_CAPABILITY_PROVIDER___ECONTAINER;
-
-	/**
-	 * The operation id for the '<em>EContaining Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_REFERENCE___ECONTAINING_FEATURE = ABSTRACT_CAPABILITY_PROVIDER___ECONTAINING_FEATURE;
-
-	/**
-	 * The operation id for the '<em>EContainment Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_REFERENCE___ECONTAINMENT_FEATURE = ABSTRACT_CAPABILITY_PROVIDER___ECONTAINMENT_FEATURE;
-
-	/**
-	 * The operation id for the '<em>EContents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_REFERENCE___ECONTENTS = ABSTRACT_CAPABILITY_PROVIDER___ECONTENTS;
-
-	/**
-	 * The operation id for the '<em>EAll Contents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_REFERENCE___EALL_CONTENTS = ABSTRACT_CAPABILITY_PROVIDER___EALL_CONTENTS;
-
-	/**
-	 * The operation id for the '<em>ECross References</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_REFERENCE___ECROSS_REFERENCES = ABSTRACT_CAPABILITY_PROVIDER___ECROSS_REFERENCES;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_REFERENCE___EGET__ESTRUCTURALFEATURE = ABSTRACT_CAPABILITY_PROVIDER___EGET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_REFERENCE___EGET__ESTRUCTURALFEATURE_BOOLEAN = ABSTRACT_CAPABILITY_PROVIDER___EGET__ESTRUCTURALFEATURE_BOOLEAN;
-
-	/**
-	 * The operation id for the '<em>ESet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_REFERENCE___ESET__ESTRUCTURALFEATURE_OBJECT = ABSTRACT_CAPABILITY_PROVIDER___ESET__ESTRUCTURALFEATURE_OBJECT;
-
-	/**
-	 * The operation id for the '<em>EIs Set</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_REFERENCE___EIS_SET__ESTRUCTURALFEATURE = ABSTRACT_CAPABILITY_PROVIDER___EIS_SET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EUnset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_REFERENCE___EUNSET__ESTRUCTURALFEATURE = ABSTRACT_CAPABILITY_PROVIDER___EUNSET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EInvoke</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY_PROVIDER_REFERENCE___EINVOKE__EOPERATION_ELIST = ABSTRACT_CAPABILITY_PROVIDER___EINVOKE__EOPERATION_ELIST;
+	int CAPABILITY_PROVIDER_REFERENCE___GET_REFERRERS__EREFERENCE = ABSTRACT_CAPABILITY_PROVIDER___GET_REFERRERS__EREFERENCE;
 
 	/**
 	 * The number of operations of the '<em>Provider Reference</em>' class.
@@ -2505,148 +1856,13 @@ public interface CapabilityPackage extends EPackage {
 	int PROVIDED_CAPABILITY___GET_REFERRERS__EREFERENCE = NxcorePackage.NAMED_PERIOD___GET_REFERRERS__EREFERENCE;
 
 	/**
-	 * The operation id for the '<em>EClass</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDED_CAPABILITY___ECLASS = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>EIs Proxy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDED_CAPABILITY___EIS_PROXY = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>EResource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDED_CAPABILITY___ERESOURCE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>EContainer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDED_CAPABILITY___ECONTAINER = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>EContaining Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDED_CAPABILITY___ECONTAINING_FEATURE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 4;
-
-	/**
-	 * The operation id for the '<em>EContainment Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDED_CAPABILITY___ECONTAINMENT_FEATURE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 5;
-
-	/**
-	 * The operation id for the '<em>EContents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDED_CAPABILITY___ECONTENTS = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 6;
-
-	/**
-	 * The operation id for the '<em>EAll Contents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDED_CAPABILITY___EALL_CONTENTS = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 7;
-
-	/**
-	 * The operation id for the '<em>ECross References</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDED_CAPABILITY___ECROSS_REFERENCES = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 8;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDED_CAPABILITY___EGET__ESTRUCTURALFEATURE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 9;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDED_CAPABILITY___EGET__ESTRUCTURALFEATURE_BOOLEAN = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 10;
-
-	/**
-	 * The operation id for the '<em>ESet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDED_CAPABILITY___ESET__ESTRUCTURALFEATURE_OBJECT = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 11;
-
-	/**
-	 * The operation id for the '<em>EIs Set</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDED_CAPABILITY___EIS_SET__ESTRUCTURALFEATURE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 12;
-
-	/**
-	 * The operation id for the '<em>EUnset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDED_CAPABILITY___EUNSET__ESTRUCTURALFEATURE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 13;
-
-	/**
-	 * The operation id for the '<em>EInvoke</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDED_CAPABILITY___EINVOKE__EOPERATION_ELIST = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 14;
-
-	/**
 	 * The number of operations of the '<em>Provided Capability</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROVIDED_CAPABILITY_OPERATION_COUNT = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 15;
+	int PROVIDED_CAPABILITY_OPERATION_COUNT = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.capability.AbstractEvidence <em>Abstract Evidence</em>}' class.
@@ -2659,148 +1875,40 @@ public interface CapabilityPackage extends EPackage {
 	int ABSTRACT_EVIDENCE = 11;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_EVIDENCE__ID = NxcorePackage.STRING_IDENTITY__ID;
+
+	/**
 	 * The number of structural features of the '<em>Abstract Evidence</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_EVIDENCE_FEATURE_COUNT = EcorePackage.EOBJECT_FEATURE_COUNT + 0;
+	int ABSTRACT_EVIDENCE_FEATURE_COUNT = NxcorePackage.STRING_IDENTITY_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>EClass</em>' operation.
+	 * The operation id for the '<em>Collect</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_EVIDENCE___ECLASS = EcorePackage.EOBJECT___ECLASS;
+	int ABSTRACT_EVIDENCE___COLLECT__OBJECT_EREFERENCE_ELIST = NxcorePackage.STRING_IDENTITY___COLLECT__OBJECT_EREFERENCE_ELIST;
 
 	/**
-	 * The operation id for the '<em>EIs Proxy</em>' operation.
+	 * The operation id for the '<em>Get Referrers</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_EVIDENCE___EIS_PROXY = EcorePackage.EOBJECT___EIS_PROXY;
-
-	/**
-	 * The operation id for the '<em>EResource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_EVIDENCE___ERESOURCE = EcorePackage.EOBJECT___ERESOURCE;
-
-	/**
-	 * The operation id for the '<em>EContainer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_EVIDENCE___ECONTAINER = EcorePackage.EOBJECT___ECONTAINER;
-
-	/**
-	 * The operation id for the '<em>EContaining Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_EVIDENCE___ECONTAINING_FEATURE = EcorePackage.EOBJECT___ECONTAINING_FEATURE;
-
-	/**
-	 * The operation id for the '<em>EContainment Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_EVIDENCE___ECONTAINMENT_FEATURE = EcorePackage.EOBJECT___ECONTAINMENT_FEATURE;
-
-	/**
-	 * The operation id for the '<em>EContents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_EVIDENCE___ECONTENTS = EcorePackage.EOBJECT___ECONTENTS;
-
-	/**
-	 * The operation id for the '<em>EAll Contents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_EVIDENCE___EALL_CONTENTS = EcorePackage.EOBJECT___EALL_CONTENTS;
-
-	/**
-	 * The operation id for the '<em>ECross References</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_EVIDENCE___ECROSS_REFERENCES = EcorePackage.EOBJECT___ECROSS_REFERENCES;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_EVIDENCE___EGET__ESTRUCTURALFEATURE = EcorePackage.EOBJECT___EGET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_EVIDENCE___EGET__ESTRUCTURALFEATURE_BOOLEAN = EcorePackage.EOBJECT___EGET__ESTRUCTURALFEATURE_BOOLEAN;
-
-	/**
-	 * The operation id for the '<em>ESet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_EVIDENCE___ESET__ESTRUCTURALFEATURE_OBJECT = EcorePackage.EOBJECT___ESET__ESTRUCTURALFEATURE_OBJECT;
-
-	/**
-	 * The operation id for the '<em>EIs Set</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_EVIDENCE___EIS_SET__ESTRUCTURALFEATURE = EcorePackage.EOBJECT___EIS_SET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EUnset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_EVIDENCE___EUNSET__ESTRUCTURALFEATURE = EcorePackage.EOBJECT___EUNSET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EInvoke</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_EVIDENCE___EINVOKE__EOPERATION_ELIST = EcorePackage.EOBJECT___EINVOKE__EOPERATION_ELIST;
+	int ABSTRACT_EVIDENCE___GET_REFERRERS__EREFERENCE = NxcorePackage.STRING_IDENTITY___GET_REFERRERS__EREFERENCE;
 
 	/**
 	 * The number of operations of the '<em>Abstract Evidence</em>' class.
@@ -2809,7 +1917,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_EVIDENCE_OPERATION_COUNT = EcorePackage.EOBJECT_OPERATION_COUNT + 0;
+	int ABSTRACT_EVIDENCE_OPERATION_COUNT = NxcorePackage.STRING_IDENTITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.capability.impl.EvidenceImpl <em>Evidence</em>}' class.
@@ -2966,148 +2074,13 @@ public interface CapabilityPackage extends EPackage {
 	int EVIDENCE___GET_REFERRERS__EREFERENCE = NxcorePackage.NAMED_PERIOD___GET_REFERRERS__EREFERENCE;
 
 	/**
-	 * The operation id for the '<em>EClass</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE___ECLASS = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>EIs Proxy</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE___EIS_PROXY = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>EResource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE___ERESOURCE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>EContainer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE___ECONTAINER = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>EContaining Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE___ECONTAINING_FEATURE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 4;
-
-	/**
-	 * The operation id for the '<em>EContainment Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE___ECONTAINMENT_FEATURE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 5;
-
-	/**
-	 * The operation id for the '<em>EContents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE___ECONTENTS = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 6;
-
-	/**
-	 * The operation id for the '<em>EAll Contents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE___EALL_CONTENTS = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 7;
-
-	/**
-	 * The operation id for the '<em>ECross References</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE___ECROSS_REFERENCES = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 8;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE___EGET__ESTRUCTURALFEATURE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 9;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE___EGET__ESTRUCTURALFEATURE_BOOLEAN = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 10;
-
-	/**
-	 * The operation id for the '<em>ESet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE___ESET__ESTRUCTURALFEATURE_OBJECT = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 11;
-
-	/**
-	 * The operation id for the '<em>EIs Set</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE___EIS_SET__ESTRUCTURALFEATURE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 12;
-
-	/**
-	 * The operation id for the '<em>EUnset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE___EUNSET__ESTRUCTURALFEATURE = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 13;
-
-	/**
-	 * The operation id for the '<em>EInvoke</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE___EINVOKE__EOPERATION_ELIST = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 14;
-
-	/**
 	 * The number of operations of the '<em>Evidence</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVIDENCE_OPERATION_COUNT = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 15;
+	int EVIDENCE_OPERATION_COUNT = NxcorePackage.NAMED_PERIOD_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.capability.impl.EvidenceDomainImpl <em>Evidence Domain</em>}' class.
@@ -3120,13 +2093,103 @@ public interface CapabilityPackage extends EPackage {
 	int EVIDENCE_DOMAIN = 13;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE_DOMAIN__ID = NxcorePackage.NAMED_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE_DOMAIN__DOCUMENTATION = NxcorePackage.NAMED_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Doc Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE_DOMAIN__DOC_REF = NxcorePackage.NAMED_ELEMENT__DOC_REF;
+
+	/**
+	 * The feature id for the '<em><b>Doc Format</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE_DOMAIN__DOC_FORMAT = NxcorePackage.NAMED_ELEMENT__DOC_FORMAT;
+
+	/**
+	 * The feature id for the '<em><b>Doc Contents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE_DOMAIN__DOC_CONTENTS = NxcorePackage.NAMED_ELEMENT__DOC_CONTENTS;
+
+	/**
+	 * The feature id for the '<em><b>Doc Sections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE_DOMAIN__DOC_SECTIONS = NxcorePackage.NAMED_ELEMENT__DOC_SECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE_DOMAIN__MARKERS = NxcorePackage.NAMED_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE_DOMAIN__ICON = NxcorePackage.NAMED_ELEMENT__ICON;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE_DOMAIN__URIS = NxcorePackage.NAMED_ELEMENT__URIS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVIDENCE_DOMAIN__NAME = NxcorePackage.NAMED_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Evidence</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVIDENCE_DOMAIN__EVIDENCE = EcorePackage.EOBJECT_FEATURE_COUNT + 0;
+	int EVIDENCE_DOMAIN__EVIDENCE = NxcorePackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Evidence Domain</em>' class.
@@ -3135,142 +2198,25 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVIDENCE_DOMAIN_FEATURE_COUNT = EcorePackage.EOBJECT_FEATURE_COUNT + 1;
+	int EVIDENCE_DOMAIN_FEATURE_COUNT = NxcorePackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>EClass</em>' operation.
+	 * The operation id for the '<em>Collect</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVIDENCE_DOMAIN___ECLASS = EcorePackage.EOBJECT___ECLASS;
+	int EVIDENCE_DOMAIN___COLLECT__OBJECT_EREFERENCE_ELIST = NxcorePackage.NAMED_ELEMENT___COLLECT__OBJECT_EREFERENCE_ELIST;
 
 	/**
-	 * The operation id for the '<em>EIs Proxy</em>' operation.
+	 * The operation id for the '<em>Get Referrers</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVIDENCE_DOMAIN___EIS_PROXY = EcorePackage.EOBJECT___EIS_PROXY;
-
-	/**
-	 * The operation id for the '<em>EResource</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE_DOMAIN___ERESOURCE = EcorePackage.EOBJECT___ERESOURCE;
-
-	/**
-	 * The operation id for the '<em>EContainer</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE_DOMAIN___ECONTAINER = EcorePackage.EOBJECT___ECONTAINER;
-
-	/**
-	 * The operation id for the '<em>EContaining Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE_DOMAIN___ECONTAINING_FEATURE = EcorePackage.EOBJECT___ECONTAINING_FEATURE;
-
-	/**
-	 * The operation id for the '<em>EContainment Feature</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE_DOMAIN___ECONTAINMENT_FEATURE = EcorePackage.EOBJECT___ECONTAINMENT_FEATURE;
-
-	/**
-	 * The operation id for the '<em>EContents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE_DOMAIN___ECONTENTS = EcorePackage.EOBJECT___ECONTENTS;
-
-	/**
-	 * The operation id for the '<em>EAll Contents</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE_DOMAIN___EALL_CONTENTS = EcorePackage.EOBJECT___EALL_CONTENTS;
-
-	/**
-	 * The operation id for the '<em>ECross References</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE_DOMAIN___ECROSS_REFERENCES = EcorePackage.EOBJECT___ECROSS_REFERENCES;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE_DOMAIN___EGET__ESTRUCTURALFEATURE = EcorePackage.EOBJECT___EGET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EGet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE_DOMAIN___EGET__ESTRUCTURALFEATURE_BOOLEAN = EcorePackage.EOBJECT___EGET__ESTRUCTURALFEATURE_BOOLEAN;
-
-	/**
-	 * The operation id for the '<em>ESet</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE_DOMAIN___ESET__ESTRUCTURALFEATURE_OBJECT = EcorePackage.EOBJECT___ESET__ESTRUCTURALFEATURE_OBJECT;
-
-	/**
-	 * The operation id for the '<em>EIs Set</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE_DOMAIN___EIS_SET__ESTRUCTURALFEATURE = EcorePackage.EOBJECT___EIS_SET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EUnset</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE_DOMAIN___EUNSET__ESTRUCTURALFEATURE = EcorePackage.EOBJECT___EUNSET__ESTRUCTURALFEATURE;
-
-	/**
-	 * The operation id for the '<em>EInvoke</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVIDENCE_DOMAIN___EINVOKE__EOPERATION_ELIST = EcorePackage.EOBJECT___EINVOKE__EOPERATION_ELIST;
+	int EVIDENCE_DOMAIN___GET_REFERRERS__EREFERENCE = NxcorePackage.NAMED_ELEMENT___GET_REFERRERS__EREFERENCE;
 
 	/**
 	 * The number of operations of the '<em>Evidence Domain</em>' class.
@@ -3279,7 +2225,7 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVIDENCE_DOMAIN_OPERATION_COUNT = EcorePackage.EOBJECT_OPERATION_COUNT + 0;
+	int EVIDENCE_DOMAIN_OPERATION_COUNT = NxcorePackage.NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.models.capability.impl.RequiredCapabilityImpl <em>Required Capability</em>}' class.
@@ -3648,28 +2594,6 @@ public interface CapabilityPackage extends EPackage {
 	EClass getCapability();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.capability.Capability#getAddresses <em>Addresses</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Addresses</em>'.
-	 * @see org.nasdanika.models.capability.Capability#getAddresses()
-	 * @see #getCapability()
-	 * @generated
-	 */
-	EReference getCapability_Addresses();
-
-	/**
-	 * Returns the meta object for the reference list '{@link org.nasdanika.models.capability.Capability#getAllAddresses <em>All Addresses</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>All Addresses</em>'.
-	 * @see org.nasdanika.models.capability.Capability#getAllAddresses()
-	 * @see #getCapability()
-	 * @generated
-	 */
-	EReference getCapability_AllAddresses();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.capability.Capability#getDependencies <em>Dependencies</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3690,17 +2614,6 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCapability_Dependents();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.capability.Capability#getLifecycle <em>Lifecycle</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Lifecycle</em>'.
-	 * @see org.nasdanika.models.capability.Capability#getLifecycle()
-	 * @see #getCapability()
-	 * @generated
-	 */
-	EAttribute getCapability_Lifecycle();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.capability.CompositeCapability <em>Composite Capability</em>}'.
@@ -3848,17 +2761,6 @@ public interface CapabilityPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCapabilityProvider_Requires();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.nasdanika.models.capability.CapabilityProvider#getLifecycle <em>Lifecycle</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Lifecycle</em>'.
-	 * @see org.nasdanika.models.capability.CapabilityProvider#getLifecycle()
-	 * @see #getCapabilityProvider()
-	 * @generated
-	 */
-	EAttribute getCapabilityProvider_Lifecycle();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.models.capability.CapabilityProviderDomain <em>Provider Domain</em>}'.
@@ -4049,22 +2951,6 @@ public interface CapabilityPackage extends EPackage {
 		EClass CAPABILITY = eINSTANCE.getCapability();
 
 		/**
-		 * The meta object literal for the '<em><b>Addresses</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CAPABILITY__ADDRESSES = eINSTANCE.getCapability_Addresses();
-
-		/**
-		 * The meta object literal for the '<em><b>All Addresses</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CAPABILITY__ALL_ADDRESSES = eINSTANCE.getCapability_AllAddresses();
-
-		/**
 		 * The meta object literal for the '<em><b>Dependencies</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4079,14 +2965,6 @@ public interface CapabilityPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CAPABILITY__DEPENDENTS = eINSTANCE.getCapability_Dependents();
-
-		/**
-		 * The meta object literal for the '<em><b>Lifecycle</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CAPABILITY__LIFECYCLE = eINSTANCE.getCapability_Lifecycle();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.capability.impl.CompositeCapabilityImpl <em>Composite Capability</em>}' class.
@@ -4211,14 +3089,6 @@ public interface CapabilityPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CAPABILITY_PROVIDER__REQUIRES = eINSTANCE.getCapabilityProvider_Requires();
-
-		/**
-		 * The meta object literal for the '<em><b>Lifecycle</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CAPABILITY_PROVIDER__LIFECYCLE = eINSTANCE.getCapabilityProvider_Lifecycle();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.models.capability.impl.CapabilityProviderDomainImpl <em>Provider Domain</em>}' class.

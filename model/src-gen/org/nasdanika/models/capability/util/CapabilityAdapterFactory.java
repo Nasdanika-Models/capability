@@ -11,6 +11,10 @@ import org.eclipse.emf.ecore.EObject;
 
 import org.nasdanika.models.capability.*;
 
+import org.nasdanika.models.iam.AccessControlled;
+
+import org.nasdanika.models.lifecycle.Staged;
+
 import org.nasdanika.models.nxcore.Documented;
 import org.nasdanika.models.nxcore.Marked;
 import org.nasdanika.models.nxcore.ModelElement;
@@ -19,6 +23,8 @@ import org.nasdanika.models.nxcore.NamedPeriod;
 import org.nasdanika.models.nxcore.Period;
 import org.nasdanika.models.nxcore.Referrable;
 import org.nasdanika.models.nxcore.StringIdentity;
+
+import org.nasdanika.models.seal.SealedElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -171,6 +177,18 @@ public class CapabilityAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseNamedPeriod(NamedPeriod object) {
 				return createNamedPeriodAdapter();
+			}
+			@Override
+			public Adapter caseAccessControlled(AccessControlled object) {
+				return createAccessControlledAdapter();
+			}
+			@Override
+			public Adapter caseSealedElement(SealedElement object) {
+				return createSealedElementAdapter();
+			}
+			@Override
+			public Adapter caseStaged(Staged object) {
+				return createStagedAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -525,6 +543,48 @@ public class CapabilityAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createNamedPeriodAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.iam.AccessControlled <em>Access Controlled</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.iam.AccessControlled
+	 * @generated
+	 */
+	public Adapter createAccessControlledAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.seal.SealedElement <em>Sealed Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.seal.SealedElement
+	 * @generated
+	 */
+	public Adapter createSealedElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.models.lifecycle.Staged <em>Staged</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.models.lifecycle.Staged
+	 * @generated
+	 */
+	public Adapter createStagedAdapter() {
 		return null;
 	}
 

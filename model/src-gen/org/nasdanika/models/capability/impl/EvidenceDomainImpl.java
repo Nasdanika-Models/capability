@@ -11,13 +11,13 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.nasdanika.models.capability.CapabilityPackage;
 import org.nasdanika.models.capability.Evidence;
 import org.nasdanika.models.capability.EvidenceDomain;
+
+import org.nasdanika.models.nxcore.impl.NamedElementImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ import org.nasdanika.models.capability.EvidenceDomain;
  *
  * @generated
  */
-public class EvidenceDomainImpl extends EObjectImpl implements EvidenceDomain {
+public class EvidenceDomainImpl extends NamedElementImpl implements EvidenceDomain {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -50,16 +50,6 @@ public class EvidenceDomainImpl extends EObjectImpl implements EvidenceDomain {
 	@Override
 	protected EClass eStaticClass() {
 		return CapabilityPackage.Literals.EVIDENCE_DOMAIN;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 	/**
