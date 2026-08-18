@@ -9,9 +9,9 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated capability -->
       <package
-            uri="ecore://nasdanika.org/models/capability"
+            uri="https://capability.models.nasdanika.org"
             class="org.nasdanika.models.capability.CapabilityPackage"
-            genModel="model/capability.genmodel"/>
+            genModel="src/main/resources/org/nasdanika/models/capability/capability.xcore"/>
    </extension>
 
 </plugin>

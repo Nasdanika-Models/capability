@@ -7,11 +7,17 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: org.nasdanika.models.capability,
  org.nasdanika.models.capability.impl,
  org.nasdanika.models.capability.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.nasdanika.ncore;visibility:=reexport
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.emf.ecore.xcore.lib,
+ org.nasdanika.models.nxcore;visibility:=reexport,
+ org.nasdanika.models.lifecycle;visibility:=reexport,
+ org.nasdanika.models.iam;visibility:=reexport,
+ org.nasdanika.models.seal;visibility:=reexport,
+ org.nasdanika.models.role;visibility:=reexport
 Bundle-ActivationPolicy: lazy

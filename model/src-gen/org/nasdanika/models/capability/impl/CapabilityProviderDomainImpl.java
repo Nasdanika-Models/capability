@@ -1,0 +1,150 @@
+/**
+ */
+package org.nasdanika.models.capability.impl;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+
+import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.nasdanika.models.capability.AbstractCapabilityProvider;
+import org.nasdanika.models.capability.CapabilityPackage;
+import org.nasdanika.models.capability.CapabilityProviderDomain;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Provider Domain</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link org.nasdanika.models.capability.impl.CapabilityProviderDomainImpl#getCapabilityProviders <em>Capability Providers</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class CapabilityProviderDomainImpl extends EObjectImpl implements CapabilityProviderDomain {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CapabilityProviderDomainImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return CapabilityPackage.Literals.CAPABILITY_PROVIDER_DOMAIN;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<AbstractCapabilityProvider> getCapabilityProviders() {
+		return (EList<AbstractCapabilityProvider>)eDynamicGet(CapabilityPackage.CAPABILITY_PROVIDER_DOMAIN__CAPABILITY_PROVIDERS, CapabilityPackage.Literals.CAPABILITY_PROVIDER_DOMAIN__CAPABILITY_PROVIDERS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CapabilityPackage.CAPABILITY_PROVIDER_DOMAIN__CAPABILITY_PROVIDERS:
+				return ((InternalEList<?>)getCapabilityProviders()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case CapabilityPackage.CAPABILITY_PROVIDER_DOMAIN__CAPABILITY_PROVIDERS:
+				return getCapabilityProviders();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case CapabilityPackage.CAPABILITY_PROVIDER_DOMAIN__CAPABILITY_PROVIDERS:
+				getCapabilityProviders().clear();
+				getCapabilityProviders().addAll((Collection<? extends AbstractCapabilityProvider>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case CapabilityPackage.CAPABILITY_PROVIDER_DOMAIN__CAPABILITY_PROVIDERS:
+				getCapabilityProviders().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case CapabilityPackage.CAPABILITY_PROVIDER_DOMAIN__CAPABILITY_PROVIDERS:
+				return !getCapabilityProviders().isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+} //CapabilityProviderDomainImpl
