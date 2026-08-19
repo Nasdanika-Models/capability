@@ -1,7 +1,7 @@
 import org.nasdanika.capability.CapabilityFactory;
 import org.nasdanika.models.capability.capability.CapabilityEPackageResourceSetCapabilityFactory;
 
-module org.nasdanika.models.capability.Capability {
+module org.nasdanika.models.capability {
 	
 	exports org.nasdanika.models.capability;
 	exports org.nasdanika.models.capability.impl;
